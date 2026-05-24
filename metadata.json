@@ -1,0 +1,6 @@
+{
+  "name": "Modern Jaap Counter & Vedic Hub",
+  "description": "An elegant, modern Jaap (Chanting) Counter and Vedic Wellness companion featuring digital beads, custom mantra presets, structured meditation trackers, authentic Vedic concepts, and atmospheric sound generators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
