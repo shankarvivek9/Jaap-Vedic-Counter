@@ -10,6 +10,8 @@ import BreathingGuide from './components/BreathingGuide';
 import MeditationSounds from './components/MeditationSounds';
 import VedicConcepts from './components/VedicConcepts';
 import HistoryDashboard from './components/HistoryDashboard';
+import WisdomLibrary from './components/WisdomLibrary';
+import InfoModal from './components/InfoModal';
 import { ChantingSession } from './types';
 
 // Curated list of inspirational spiritual verses for the ticker
@@ -21,9 +23,10 @@ const DAILY_VERSES = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'jaap' | 'meditation' | 'sounds' | 'concepts' | 'analytics'>('jaap');
+  const [activeTab, setActiveTab] = useState<'jaap' | 'meditation' | 'sounds' | 'concepts' | 'wisdom' | 'analytics'>('jaap');
   const [sessions, setSessions] = useState<ChantingSession[]>([]);
   const [verseIndex, setVerseIndex] = useState<number>(0);
+  const [modalSection, setModalSection] = useState<'about' | 'contact' | 'privacy' | 'terms' | null>(null);
 
   // Load chanting sessions from LocalStorage on mount
   useEffect(() => {
@@ -183,6 +186,19 @@ export default function App() {
           </button>
 
           <button
+            onClick={() => setActiveTab('wisdom')}
+            className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+              activeTab === 'wisdom'
+                ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
+                : 'text-slate-300 hover:bg-white/10 hover:text-white'
+            }`}
+            id="nav-tab-wisdom"
+          >
+            <BookOpen className="w-4 h-4 shrink-0" />
+            Wisdom Library
+          </button>
+
+          <button
             onClick={() => setActiveTab('analytics')}
             className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer relative ${
               activeTab === 'analytics'
@@ -217,6 +233,10 @@ export default function App() {
             <VedicConcepts />
           )}
 
+          {activeTab === 'wisdom' && (
+            <WisdomLibrary />
+          )}
+
           {activeTab === 'analytics' && (
             <HistoryDashboard 
               sessions={sessions} 
@@ -234,20 +254,52 @@ export default function App() {
             <Heart className="w-4 h-4 text-orange-500 fill-current animate-pulse shrink-0" />
             <span>Formulated for mental peace, tranquility, and cellular rejuvenation. Practice daily.</span>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="hover:text-slate-200 cursor-help">Sadhana Rules</span>
-            <span>•</span>
-            <span className="hover:text-slate-200 cursor-help">Upanishad Texts</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <button 
+              onClick={() => setModalSection('about')} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              About Us
+            </button>
             <span>•</span>
             <button 
-              onClick={() => setActiveTab('concepts')} 
+              onClick={() => setModalSection('contact')} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              Contact Us
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setModalSection('privacy')} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              Privacy Policy
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setModalSection('terms')} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              Terms & Conditions
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setActiveTab('wisdom')} 
               className="text-orange-400 hover:underline cursor-pointer"
             >
-              Study Scriptures
+              Wisdom Library
             </button>
           </div>
         </div>
       </footer>
+
+      {/* Info Modals */}
+      {modalSection && (
+        <InfoModal 
+          section={modalSection} 
+          onClose={() => setModalSection(null)} 
+        />
+      )}
     </div>
   );
 }
