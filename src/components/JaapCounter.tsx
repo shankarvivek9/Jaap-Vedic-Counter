@@ -12,9 +12,17 @@ import { Mantra, ChantingSession } from '../types';
 
 interface JaapCounterProps {
   onSessionComplete: (session: ChantingSession) => void;
+  initialMantraName?: string | null;
+  initialTargetLimit?: number | null;
+  onClearInitialMantra?: () => void;
 }
 
-export default function JaapCounter({ onSessionComplete }: JaapCounterProps) {
+export default function JaapCounter({ 
+  onSessionComplete,
+  initialMantraName,
+  initialTargetLimit,
+  onClearInitialMantra
+}: JaapCounterProps) {
   const [selectedMantra, setSelectedMantra] = useState<Mantra>(MANTRAS[0]);
   const [count, setCount] = useState<number>(0);
   const [target, setTarget] = useState<number>(108);
@@ -25,6 +33,25 @@ export default function JaapCounter({ onSessionComplete }: JaapCounterProps) {
   const [startTime, setStartTime] = useState<number>(Date.now());
   const [touchActive, setTouchActive] = useState<boolean>(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  // Sync to initial values if passed from homepage or knowledge hub
+  useEffect(() => {
+    if (initialMantraName) {
+      const match = MANTRAS.find(m => m.name.toLowerCase().includes(initialMantraName.toLowerCase()));
+      if (match) {
+        setSelectedMantra(match);
+        setCount(0);
+        setCompletedMalas(0);
+        if (initialTargetLimit) {
+          setTarget(initialTargetLimit);
+        }
+        setToastMessage(`Preselected: ${match.name}`);
+      }
+      if (onClearInitialMantra) {
+        onClearInitialMantra();
+      }
+    }
+  }, [initialMantraName, initialTargetLimit]);
 
   // References to handle keyboard shortcuts
   const counterRef = useRef<HTMLButtonElement>(null);

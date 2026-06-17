@@ -6,11 +6,11 @@
 import React, { useState } from 'react';
 import { 
   X, Mail, Globe, MapPin, Send, CheckCircle2, 
-  ShieldCheck, Landmark, Heart, Info, MessageSquare 
+  ShieldCheck, Landmark, Heart, Info, MessageSquare, AlertCircle
 } from 'lucide-react';
 
 interface InfoModalProps {
-  section: 'about' | 'contact' | 'privacy' | 'terms' | null;
+  section: 'about' | 'contact' | 'privacy' | 'terms' | 'disclaimer' | null;
   onClose: () => void;
 }
 
@@ -40,7 +40,8 @@ export default function InfoModal({ section, onClose }: InfoModalProps) {
       case 'about': return 'About Us — Japa Sādhanā';
       case 'contact': return 'Contact Spiritual Support';
       case 'privacy': return 'Privacy Policy';
-      case 'terms': return 'Terms & ConditionsOf Practice';
+      case 'terms': return 'Terms & Conditions Of Practice';
+      case 'disclaimer': return 'Medical & Spiritual Disclaimer';
     }
   };
 
@@ -263,6 +264,38 @@ export default function InfoModal({ section, onClose }: InfoModalProps) {
               <h4 className="text-sm font-bold text-white mt-4 border-b border-white/5 pb-1">3. Absolute Free Distribution</h4>
               <p>
                 The knowledge, layout, and Sanskrit translation keys contained in this applet are distributed unconditionally for the welfare of humanity. You are welcome to clone, copy, or redistribute this content under standard open-source parameters, provided you maintain references back to the sacred wisdom lineage of modern Vedic study.
+              </p>
+            </div>
+          )}
+
+          {/* 5. MEDICAL & SPIRITUAL DISCLAIMER SECTION */}
+          {section === 'disclaimer' && (
+            <div className="space-y-4 animate-fade-in">
+              <div className="flex gap-3 mb-2.5">
+                <AlertCircle className="w-8 h-8 text-rose-500 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-sm font-extrabold text-[#fc8a8a]">Ecclesiastical & Medical Disclaimer</h4>
+                  <p className="text-[11.5px] text-slate-400">Educational limits, sound limits, and practice boundaries.</p>
+                </div>
+              </div>
+
+              <p>
+                The information, metrics, recordings, and frequency generators offered throughout this platform (including the simulated Mala, Solfeggio soundscapes, and breathing rhythm scripts) are designed solely for educational, cultural, and spiritual exploration.
+              </p>
+
+              <h4 className="text-sm font-bold text-white mt-4 border-b border-white/5 pb-1">1. Not a Substitute for Medical Advice</h4>
+              <p>
+                Meditation and rhythmic breath-control (Pranayama) are powerful somatic practices but do NOT constitute professional clinical or psychological diagnosis, advice, or treatment. If you suffer from underlying cardiovascular conditions, respiratory illness, high blood pressure, pregnancy, or panic disorders, consult a certified physician before performing pranayama patterns (particularly those involving Kumbhaka or breath retention).
+              </p>
+
+              <h4 className="text-sm font-bold text-white mt-4 border-b border-white/5 pb-1">2. Acoustic Safety Guidelines</h4>
+              <p>
+                Our interactive signal oscillators are capable of producing pure frequency currents directly inside your headset. Please check sound outputs carefully before practice to preserve auditory safety. We are not responsible for any sensory strain or hearing issues resulting from continuous extreme loud headphone play.
+              </p>
+
+              <h4 className="text-sm font-bold text-white mt-4 border-b border-white/5 pb-1">3. Educational & Archival Focus</h4>
+              <p>
+                All dynamic materials, blog articles, and translations have been curated for literary and historical study of traditional Sanskrit culture. Your mental and physiological response to continuous chanting is completely unique; this tools is provided self-initially for introspective spiritual exploration/stress reduction without guaranteeing miraculous physical therapeutic outcomes.
               </p>
             </div>
           )}

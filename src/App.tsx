@@ -10,7 +10,8 @@ import BreathingGuide from './components/BreathingGuide';
 import MeditationSounds from './components/MeditationSounds';
 import VedicConcepts from './components/VedicConcepts';
 import HistoryDashboard from './components/HistoryDashboard';
-import WisdomLibrary from './components/WisdomLibrary';
+import SpiritualKnowledgeHub from './components/SpiritualKnowledgeHub';
+import HomepageWisdom from './components/HomepageWisdom';
 import InfoModal from './components/InfoModal';
 import { ChantingSession } from './types';
 
@@ -26,7 +27,14 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'jaap' | 'meditation' | 'sounds' | 'concepts' | 'wisdom' | 'analytics'>('jaap');
   const [sessions, setSessions] = useState<ChantingSession[]>([]);
   const [verseIndex, setVerseIndex] = useState<number>(0);
-  const [modalSection, setModalSection] = useState<'about' | 'contact' | 'privacy' | 'terms' | null>(null);
+  const [modalSection, setModalSection] = useState<'about' | 'contact' | 'privacy' | 'terms' | 'disclaimer' | null>(null);
+
+  // Dynamic deep-linking states
+  const [preSelectedMantraName, setPreSelectedMantraName] = useState<string | null>(null);
+  const [preSelectedTarget, setPreSelectedTarget] = useState<number | null>(null);
+  const [activeArticleId, setActiveArticleId] = useState<string | null>(null);
+  const [activeMantraId, setActiveMantraId] = useState<string | null>(null);
+  const [activeGuideId, setActiveGuideId] = useState<string | null>(null);
 
   // Load chanting sessions from LocalStorage on mount
   useEffect(() => {
@@ -218,7 +226,28 @@ export default function App() {
         {/* Primary Screen Canvas Area */}
         <main className="flex-1 flex flex-col justify-between" id="active-screen-canvas-box">
           {activeTab === 'jaap' && (
-            <JaapCounter onSessionComplete={handleAddSession} />
+            <div className="space-y-6">
+              <JaapCounter 
+                onSessionComplete={handleAddSession} 
+                initialMantraName={preSelectedMantraName}
+                initialTargetLimit={preSelectedTarget}
+                onClearInitialMantra={() => {
+                  setPreSelectedMantraName(null);
+                  setPreSelectedTarget(null);
+                }}
+              />
+              <HomepageWisdom 
+                onSelectMantra={(mantraName, countValue) => {
+                  setPreSelectedMantraName(mantraName);
+                  setPreSelectedTarget(countValue);
+                  // Scroll to top of counter smoothly
+                  window.scrollTo({ top: 300, behavior: 'smooth' });
+                }}
+                onNavigateTab={(targetTab) => {
+                  setActiveTab(targetTab);
+                }}
+              />
+            </div>
           )}
 
           {activeTab === 'meditation' && (
@@ -234,7 +263,20 @@ export default function App() {
           )}
 
           {activeTab === 'wisdom' && (
-            <WisdomLibrary />
+            <SpiritualKnowledgeHub 
+              onSelectMantraForCounter={(mantraName, countValue) => {
+                setPreSelectedMantraName(mantraName);
+                setPreSelectedTarget(countValue);
+                setActiveTab('jaap');
+                window.scrollTo({ top: 350, behavior: 'smooth' });
+              }}
+              activeArticleId={activeArticleId}
+              onNavigateArticle={setActiveArticleId}
+              activeMantraId={activeMantraId}
+              onNavigateMantra={setActiveMantraId}
+              activeGuideId={activeGuideId}
+              onNavigateGuide={setActiveGuideId}
+            />
           )}
 
           {activeTab === 'analytics' && (
@@ -281,6 +323,13 @@ export default function App() {
               className="hover:text-slate-200 cursor-pointer focus:outline-none"
             >
               Terms & Conditions
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setModalSection('disclaimer')} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              Disclaimer
             </button>
             <span>•</span>
             <button 
