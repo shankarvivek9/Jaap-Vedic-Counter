@@ -69,21 +69,21 @@ export function AboutPage() {
           </li>
         </ul>
 
-        <h2 className="text-md font-extrabold text-white pt-4 border-b border-white/5 pb-1">Our Dedicated Scholars & Founders</h2>
+        <h2 className="text-md font-extrabold text-white pt-4 border-b border-white/5 pb-1">Authentic Community & Open Source Philosophy</h2>
         <p>
-          This application was conceived as a synthesis of classical eastern teachings and modern wellness engineering:
+          This application was designed as a free, open-source community platform to help people practice focus and meditation through traditional Sanskrit chanting:
         </p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           <li className="p-3 bg-white/3 border border-white/5 rounded-xl space-y-1">
-            <span className="text-xs font-bold text-orange-100">Acharya Shankar Dev, PhD</span>
-            <p className="text-[11px] text-slate-410 leading-normal">
-              Chief Vedic linguist. Studies chanting phonetics within regional schools at Varanasi and Assi Ghat to optimize breath patterns and sound emissions.
+            <span className="text-xs font-bold text-orange-100">Classical Sanskrit Texts</span>
+            <p className="text-[11px] text-slate-400 leading-normal">
+              All translations, pronunciation guides, and etymologies are sourced from standard scholarly translations of classical scriptures, including the Bhagavad Gita, the Principal Upanishads, and Patanjali's Yoga Sutras.
             </p>
           </li>
           <li className="p-3 bg-white/3 border border-white/5 rounded-xl space-y-1">
-            <span className="text-xs font-bold text-orange-100">Amrita Rao, MD (Cognitive Sciences)</span>
-            <p className="text-[11px] text-slate-410 leading-normal">
-              Consulting neurologist researching how high-contrast dark visual interfaces and rhythmic chanting shifts mental brainwave states from frenetic beta into deep theta cycles.
+            <span className="text-xs font-bold text-orange-100">Community Volunteers</span>
+            <p className="text-[11px] text-slate-400 leading-normal">
+              We are a collective of yoga practitioners, Sanskrit language students, and software developers. The tool is maintained as a public utility to keep traditional meditation free from distracting premium memberships and excessive tracking.
             </p>
           </li>
         </ul>
@@ -391,136 +391,239 @@ export function FAQPage() {
         <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
           Knowledge Base (FAQ)
         </span>
-        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Frequently Asked Questions: Vedic Biophysics, Acoustic Science & Practice Guidance</h1>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Frequently Asked Questions: Vedic Wisdom, Meditation & Practice Guidance</h1>
       </div>
 
       <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
         <p className="text-xs text-slate-400 mb-6 italic">
-          This comprehensive FAQ resource integrates academic neuroscience, clinical health guidelines, historical mathematics, and operational policy details. We present all answers in clear, objective English to support absolute clarity and AdSense program integrity. No thin placeholders are used.
+          This comprehensive FAQ resource integrates traditional wisdom, practical study guides, and setup guidelines in clear, natural English.
         </p>
 
         <div className="space-y-6">
           {/* Question 1 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q1:</span>
-              What is the physiological relationship between Sanskrit sound chanting (Japa) and the Autonomic Nervous System (ANS)?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q1:</span>
+              <span>What is Japa (or Jaap)?</span>
             </h3>
-            <p>
-              Chanting authentic, high-frequency sound syllables—when executed with structured respiratory discipline—functions as a powerful, non-invasive neuromodulator. At the core of this physiological shift is the <strong>Vagus Nerve</strong> (the tenth cranial nerve). The Vagus nerve serves as a highly responsive sensory superhighway connecting the thoracic cavities, pulmonary airways, larynx, and cardiac complexes directly to the solitary tract in the brainstem.
-            </p>
-            <p>
-              When a practitioner chanting a mantra intentionally prolongs their exhalation (vocalization phase) to are roughly double the duration of their inhalation, they instantly activate a physiological process known as <strong>Respiratory Sinus Arrhythmia (RSA)</strong>. The slow, controlled vibration of the vocal folds during vocalization triggers the recurrent laryngeal nerve, which sends continuous sensory signals to the cranial vagal centers. This stimulates parasympathetic (rest-and-digest) tones while reducing the background sympathetic (fight-or-flight) noise.
-            </p>
-            <p>
-              Furthermore, neuro-imaging trials during vocal chanting show a peaceful damping of the amygdala (the brain's emotional threat interpreter) and the default mode network (DMN), which is often associated with hyperactive daydreaming, anxiety, and repetitive stress thoughts. This leads to marked decreases in arterial blood tension, salivary cortisol concentrations, and chronic muscle tension.
+            <p className="text-slate-305 text-slate-300">
+              Japa is a traditional meditative practice that involves repeating a chosen mantra, phrase, or sacred sound. Sourced from the Sanskrit roots of "ja" (to destroy mental distraction) and "pa" (to protect the mind's clarity), it serves as a way to focus attention, quiet idle thoughts, and anchor oneself in the present moment through dedicated repetition.
             </p>
           </div>
 
           {/* Question 2 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q2:</span>
-              Why is the number 108 considered mathematically and cosmically sacred in Vedic chanting (Sadhana)?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q2:</span>
+              <span>What are the main benefits of a daily Japa practice?</span>
             </h3>
-            <p>
-              The choice of 108 repetitions (the classic Mala length) is not an arbitrary religious convention, but a deep mathematical and cosmological ratio that bridges external celestial structures with internal human biometrics.
-            </p>
-            <p>
-              In traditional astronomy and astrology (Jyotish), the universe is mapped using <strong>27 Lunar Mansions (Nakshatras)</strong>, each divided into <strong>4 unique quarters (Padas)</strong>. The product of these coordinates (27 multiplied by 4) yields exactly 108 distinct cosmic sectors. Chanting 108 reps is seen as a symbolic journey through all celestial quadrants, harmonizing one's individual consciousness with planetary movements.
-            </p>
-            <p>
-              Additionally, the physical scale distances of our solar system are governed by this exact proportion:
-            </p>
-            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-1">
-              <li>The average distance from the Earth to the Sun is approximately <strong>108 times</strong> the diameter of the Sun.</li>
-              <li>The average distance from the Earth to the Moon is approximately <strong>108 times</strong> the diameter of the Moon.</li>
-              <li>The diameter of the Sun is approximately <strong>108 times</strong> the physical diameter of the Earth.</li>
-            </ul>
-            <p>
-              By utilizing the standard 108 repetition counter inside our app, practitioners align their focal awareness with these astronomical ratios. This practices provides a powerful cognitive grounding point that deepens focus and spiritual discipline.
+            <p className="text-slate-305 text-slate-300">
+              Practicing sound repetition daily builds deep mental discipline, increases focus, and reduces daily stress. On a physical level, the calm, rhythmically slowed breathing associated with chanting helps soothe the nervous system, shifting the body away from its fight-or-flight stress response into a deep, restorative state of peace.
             </p>
           </div>
 
           {/* Question 3 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q3:</span>
-              How does the Live Ambient Drone Synthetic technology assist my concentration and focus?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q3:</span>
+              <span>Why is the number 108 considered highly sacred?</span>
             </h3>
-            <p>
-              Most wellness apps rely on highly compressed, pre-recorded MP3 files that run on rigid loops. The human brain is incredibly sensitive to repetitive sound loops; within minutes, the auditory cortex recognizes the repetitive markers, leading to visual boredom or mental irritation.
-            </p>
-            <p>
-              Our <strong>Meditation Sounds engine</strong> solves this by synthesizing continuous, real-time audio waves directly on your computer's browser using the native Web Audio API. By playing pure 136.1 Hz (OM frequency) planet-orbital sine oscillations paired with subtle stereo panning and soft, custom-modulated pink noise water ripples, our system creates an organic noise-masking shield. 
-            </p>
-            <p>
-              This live sound shield triggers <strong>auditory sensory gating</strong>, which automatically filters out abrupt neighborhood noises, keyboard clicks, or traffic hums. This lets your mind settle into stable <strong>Alpha and Theta brainwave patterns (4 - 12 Hz)</strong>, which are highly supportive of deep memory, spatial relaxation, and effortless focus during physical Japa chanting.
+            <p className="text-slate-305 text-slate-300">
+              The number 108 is a sacred mathematical ratio in ancient cosmological traditions. Culturally, it links the earth and cosmos: for example, the distance between the Earth and the Sun is approximately 108 times the Sun's diameter. It is also believed that there are 108 energetic pathways meeting in the human heart center, making a full circle of 108 chants an alignment of inner and outer nature.
             </p>
           </div>
 
           {/* Question 4 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q4:</span>
-              Is Japa Sadhana a sectarian application, and can a practitioner of any philosophy use it?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q4:</span>
+              <span>How do I start or set up my practice as a absolute beginner?</span>
             </h3>
-            <p>
-              Japa Sadhana is designed on <strong>completely universal, academic, and non-sectarian scientific principles</strong>. While the historical source material originates from Sanskrit literature, Upanishads, and Vedic traditions, our focus is entirely on the physiological, neurological, and acoustical benefits of mindful sound repetition and paced breathing.
-            </p>
-            <p>
-              The primary purpose of Japa is to quiet mental fluctuations (Chitta Vritti). Practitioners from all backgrounds—including secular mindfulness students, Zen meditators, academic researchers, and sound therapy students—actively utilize our digital counter and breath regulators. You can easily enter custom phrases, prayers, or mantras inside our system to align our tools with your personal path.
+            <p className="text-slate-305 text-slate-300">
+              To begin, find a quiet spot in your home free from immediate distractions. Sit comfortably with your spine tall but not rigid. Choose a straightforward, soothing mantra like "Om" or "Shanti" (Peace), take a few deep breaths, and begin chanting at a steady, unhurried pace, focusing your awareness fully on the sound.
             </p>
           </div>
 
           {/* Question 5 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q5:</span>
-              How does the Japa Sadhana application manage tracking, cookies, and AdSense data?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q5:</span>
+              <span>How do I physically count with a traditional Japa Mala (rosary)?</span>
             </h3>
-            <p>
-              Your spiritual practices are a private space. To protect your cognitive autonomy, we adhere to a <strong>strict offline-first and local-first data model</strong>:
+            <p className="text-slate-305 text-slate-300">
+              A traditional mala has 108 beads and one larger seed called the Guru bead. Drape the mala over the middle finger of your right hand. Use your thumb to softly pull each bead toward you as you finish reciting your mantra once. The index finger is kept raised and does not touch the beads, representing the setting aside of the ego during prayer.
             </p>
-            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-2">
-              <li>
-                <strong>No Cloud Databases:</strong> We do not ask for login details, emails, or personal profiles. Your chanting logs, mala milestones, times, and sound settings survive entirely on your own laptop or phone inside your browser's persistent HTML5 LocalStorage.
-              </li>
-              <li>
-                <strong>Programmatic AdSense:</strong> To support the high costs of server maintenance and writing premium educational articles, we serve basic programmatic Google AdSense blocks on our domain. These ads follow strict Google compliance rules, and are never combined with any local spiritual telemetry or chanting data.
-              </li>
-              <li>
-                <strong>Google Analytics:</strong> We use basic aggregate traffic analytics to view the general count of active sessions globally, helping us optimize server bandwidth. No personal data is ever collected or sold.
-              </li>
-            </ul>
           </div>
 
           {/* Question 6 */}
-          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-            <h3 className="text-sm font-black text-white flex items-center gap-2">
-              <span className="text-xs font-mono text-orange-400">Q6:</span>
-              What respiratory breathwork patterns do you provide, and are there physical health constraints?
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q6:</span>
+              <span>Do I have to chant aloud, or is mental chanting effective too?</span>
             </h3>
-            <p>
-              Our <strong>Yogic Pranayama Coach</strong> supports two highly validated physiological tempos:
+            <p className="text-slate-305 text-slate-300">
+              Both states are incredibly valuable. Chanting aloud (called Vaikhari) is excellent for beginners as it blocks out external noise physically. Whispering (Upamsu) turns the focus further inward, while silent mental repetition (Manasa) represents the deepest, most concentrated stage where sound floats purely within silent attention.
             </p>
-            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-2">
-              <li>
-                <strong>Sama Vritti (Box Breathing):</strong> Equal 4-second phases for inhalation, breath retention (kumbhaka), exhalation, and empty hold. This pattern is widely used by high-performance athletes and tactical units to balance sympathetic adrenaline spikes, lower cardiovascular stress, and restore situational focus.
-              </li>
-              <li>
-                <strong>Prana Vardhak (4-7-8 Tranquilizer):</strong> A 4-second inhale, a deep 7-second oxygen-gating hold, and a long, relaxing 8-second exhale. This pattern acts as an immediate natural tranquilizer for your autonomic nervous system, clearing stale air and preparing the mind for peaceful contemplation.
-              </li>
-            </ul>
-            <p>
-              <strong>Health Safety Notice:</strong> Voluntary breathholding directly changes arterial gas balances and carbon dioxide levels. Do not force holds past your physical comfort levels. If you experience any dizziness, confusion, or breathing discomfort, immediately stop the exercise and sit back to breathe normally. Pregnant women or individuals with high blood pressure, history of seizures, or cardiac blocks must consult their doctor prior to utilizing deep retention cycles.
+          </div>
+
+          {/* Question 7 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q7:</span>
+              <span>What is the best time of the day to practice Japa?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              The early morning pre-dawn hours, known as Brahma Muhurta (roughly 90 minutes before sunrise), are traditionally considered highly auspicious. The atmosphere is quiet, the mind is refreshed from sleep, and fewer distractions compete for your mental focus, making it easier to establish a tranquil foundation. Evening dusk is also a popular calming checkpoint.
+            </p>
+          </div>
+
+          {/* Question 8 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q8:</span>
+              <span>Why is sitting on a natural wool or cotton mat recommended?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              Traditional scriptures suggest sitting on natural materials like cotton, silk, or wool. These materials serve as insulating barriers against the cold floor and create a cozy, dedicated physical space. Practically, the mat acts as a sensory trigger, signaling to your brain that it is time to sit quietly and leave external tasks behind.
+            </p>
+          </div>
+
+          {/* Question 9 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q9:</span>
+              <span>My mind keeps wandering during chanting. Am I doing it wrong?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              Absolutely not. Constant wandering is the natural habit of the mind. When you notice a distracting thought, simply acknowledge it without judging yourself or getting frustrated, and gently guide your attention back to the rhythm of the syllables or the feeling of the bead in your hand. The practice of returning is the meditation itself.
+            </p>
+          </div>
+
+          {/* Question 10 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q10:</span>
+              <span>Is Japa meditation restricted to a single religious philosophy?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              No. Rhythmic repetition of sacred words, prayers, or affirmations is a universal human heritage found across almost all historical cultures and lineages (including Buddhist bead counts, western rosaries, and secular mindfulness groups). Anyone looking to calm stress and cultivate deep internal awareness can practice Japa.
+            </p>
+          </div>
+
+          {/* Question 11 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q11:</span>
+              <span>How should I pair breathing with my chanting practice?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              Let your breathing remain natural, steady, and unforced. Chant sequentially on your natural, smooth exhalation. You can also breathe in quietly as you slide to a new bead, or simply maintain a gentle abdominal breathing flow while matching the recitation speed to your comfortable resting breath.
+            </p>
+          </div>
+
+          {/* Question 12 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q12:</span>
+              <span>How does the live background drone sound in this app assist concentration?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              Traditional sitars and devotional chants are always accompanied by a steady, soothing drone. The drone synthesizer in our app simulates traditional sitar strings or harmonium acoustic tones. This continuous sound masks sudden environmental noises (like typing, clicking, or passing traffic), allowing your auditory system to shift effortlessly into a peaceful state.
+            </p>
+          </div>
+
+          {/* Question 13 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q13:</span>
+              <span>Is using a digital counter as good as a physical wooden bead mala?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              A physical wooden mala is a wonderful tactile tool that helps ground your hands and touch. However, a digital counter serves as an incredibly useful modern companion when traveling, working at a computer, or sitting without physical tools. The core of Japa is sincere awareness and devotion, which transcends any individual interface.
+            </p>
+          </div>
+
+          {/* Question 14 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q14:</span>
+              <span>Why is the index finger excluded from handling the beads?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              In traditional Indian philosophy, the index finger represents the "Ahankara" (the ego, which points, judges, and demands). Meditation is a path of humility and release. Leaving the index finger separated from the sacred counting beads serves as a physical reminder to set aside one's personal identity and pride during practice.
+            </p>
+          </div>
+
+          {/* Question 15 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q15:</span>
+              <span>What do I do when I reach the larger Guru (Sumeru) bead on a mala?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              In traditional lineages, you do not cross or skip over the Guru bead when continuing to a second round of 108. Instead, pause to take a deep, respectful breath, flip the mala around in your palm, and count back in the opposite direction. This honors the source of wisdom and halts automatic, unmindful rote chanting.
+            </p>
+          </div>
+
+          {/* Question 16 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q16:</span>
+              <span>How long does it typically take to complete a full round of 108 chants?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              The duration depends completely on the length of the mantra and your individual chanting speed. Short mantras like "Om Namah Shivaya" or "Om Gam Ganapataye" typically take 6 to 10 minutes to complete. Longer, complex mantras like the Gayatri or Mahamrityunjaya can take anywhere from 15 to 25 minutes of steady, serene focus.
+            </p>
+          </div>
+
+          {/* Question 17 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q17:</span>
+              <span>Can I practice Japa while lying down or walking?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              Sitting tall is highly recommended because it supports natural spinal alignment and keeps you awake and alert. However, if you are experiencing illness or fatigue, chanting while lying down is extremely soothing. Walking Japa (called Likhit Japa or active meditation) in a quiet garden is also a beautiful way to bring mindfulness to daily physical movement.
+            </p>
+          </div>
+
+          {/* Question 18 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q18:</span>
+              <span>Does my pronunciation of the Sanskrit mantras have to be absolutely perfect?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              While taking the time to learn clean, traditional pronunciation helps respect the language and create standard resonance, the most critical factor is the sincerity of your heart, focus, and quiet devotion. Try to listen to traditional vocal recordings and improve over time, but do not let a fear of mistakes stop you from practicing.
+            </p>
+          </div>
+
+          {/* Question 19 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q19:</span>
+              <span>How does Japa support building healthy daily habits?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-355 text-slate-300">
+              By committing to a small, measurable goal (like completing one full round of 108 chants every morning before work), you build strong mental resilience. Keeping an authentic log in our application's Diary helps you track your consistent, quiet effort over weeks, turning mindfulness into a natural daily ritual.
+            </p>
+          </div>
+
+          {/* Question 20 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-2">
+            <h3 className="text-sm font-black text-white flex items-start gap-2">
+              <span className="text-xs font-mono text-orange-400 shrink-0 mt-0.5">Q20:</span>
+              <span>How is my personal practice data tracked and managed in this app?</span>
+            </h3>
+            <p className="text-slate-305 text-slate-300">
+              We hold a sacred respect for your privacy. All of your practice durations, completed session counts, and target goals are saved locally on your own computer or phone (client-side storage). We do not use remote databases, require login accounts, or collect any private meditation details, ensuring your personal practice remains entirely your own.
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/5 pt-6 text-center space-y-2">
           <p className="text-xs text-slate-400">
-            Have a question not addressed in this academic FAQ compendium? Feel free to contact our team of researchers.
+            Have a question not addressed in this practical FAQ compendium? Feel free to contact our coordinator team.
           </p>
           <PathLink href="/contact" className="inline-flex items-center gap-1 text-xs text-orange-400 hover:underline font-bold">
             Contact Support & Ashram Coordinator →
@@ -529,7 +632,7 @@ export function FAQPage() {
 
         <hr className="border-white/5 my-4" />
         <p className="text-[10px] text-center text-slate-500 font-mono">
-          Last Updated: June 2026. Designed on modern, research-driven, and high-integrity principles.
+          Last Updated: June 2026. Made with profound respect for the Sanskrit tradition of sound.
         </p>
       </div>
     </div>
@@ -543,59 +646,50 @@ export function AuthorPage() {
 
       <div className="border-b border-white/5 pb-4">
         <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
-          E-E-A-T Authenticity & Credentials
+          Authenticity & Source Standards
         </span>
-        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Our Advisory Board, Academic Authors & Research Collaborators</h1>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Editorial Framework & Content Sources</h1>
       </div>
 
       <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
         <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
-          <h2 className="text-base font-black text-white">Trust, Experience, and Rigor in Traditional Vedic Sciences</h2>
+          <h2 className="text-base font-black text-white">Commitment to Verifiable Truth and Ancient Tradition</h2>
           <p>
-            To stand up to the rigorous requirements of global web directories, modern search engines, and Google AdSense guidelines, Japa Sādhanā enforces complete transparency. Our primary content repository, which covers <strong>30 science-backed blog articles</strong> and <strong>50 Sanskrit mantra pages</strong>, is thoroughly written, reviewed, and authorized by a multi-disciplinary steering committee. This board integrates classical philological experts with clinical neurologists and platform engineers.
+            To align with search engine trust guidelines, Japa Sādhanā maintains total transparency. We believe in providing verifiable spiritual and educational content without presenting fabricated degrees, unbacked health claims, or simulation editorial boards. Our repository of <strong>30 blog articles</strong> and <strong>50 Sanskrit mantra guides</strong> is curated by volunteers who review classical translation texts and peer-reviewed mindfulness studies.
           </p>
         </div>
 
         <div className="space-y-6 pt-2">
-          {/* Bio 1 */}
+          {/* Sourcing Pillar 1 */}
           <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
-              <span className="text-md font-black text-orange-400">Acharya Dr. Shankar Dev, PhD</span>
-              <span className="text-xs font-mono text-slate-400">Chief Writer & Philological Advisor</span>
+              <span className="text-md font-black text-orange-400">Standard Scriptural References</span>
+              <span className="text-xs font-mono text-slate-400">Authentic Philosophical Core</span>
             </div>
             <p>
-              Dr. Shankar Dev holds a PhD in classical Sanskrit philology and acoustic phonetics from Banaras Hindu University (BHU), Varanasi. For over three decades, he has conducted intensive localized field research across traditional Vedic gurukuls in Varanasi, Kerala, and Rishikesh. His academic thesis centers on the precise mathematical structures of the Shukla Yajurveda Samhita and its neurological impacts during long-form, multi-cadence recitations.
-            </p>
-            <p>
-              Dr. Dev translates the raw Sanskrit texts, checks the word-by-word etymological accuracy, and compiles historical contexts for each of the 50 mantras within our library. His work keeps our descriptions grounded in strict historical reality, avoiding the loose, exaggerated, or copy-pasted claims common on modern blogs.
+              To ensure our Sanskrit pronunciations, metrics (chhandas), and translations are pristine, we consult standard, globally recognized scholarly translations of sacred Vedic literature. Our primary scriptures include the <strong>Shukla Yajurveda Samhita</strong>, the <strong>Principal Upanishads</strong>, the <strong>Bhagavad Gita</strong>, and <strong>Patanjali’s Yoga Sutras</strong>. Meaning-by-meaning analysis is cross-examined against classic commentaries by historical scholars like Adi Shankaracharya and Swami Vivekananda.
             </p>
           </div>
 
-          {/* Bio 2 */}
+          {/* Sourcing Pillar 2 */}
           <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
-              <span className="text-md font-black text-orange-400">Dr. Amrita Rao, MD (Cognitive Neurosciences)</span>
-              <span className="text-xs font-mono text-slate-400">Biological Research & Editorial Reviewer</span>
+              <span className="text-md font-black text-orange-400">Verifiably Sourced Physiology</span>
+              <span className="text-xs font-mono text-slate-400">Grounded Cognitive Benefits</span>
             </div>
             <p>
-              Dr. Amrita Rao is a certified practicing clinical researcher and cognitive neurologist with a specialization in cardiac-brain autonomic interactions. She completed her medical training and psychiatric fellowship at the National Institute of Mental Health and Neurosciences (NIMHANS). Her active focus investigates how external acoustical resonances, rhythmic deep breathing, and slow visual cues influence Heart Rate Variability (HRV) and respiratory sinus arrhythmia (RSA).
-            </p>
-            <p>
-              Dr. Rao oversees the biological, medical, and physiological commentary in our 30 blog articles. She ensures that every reference to vagus nerve stimulation, amygdala down-regulation, cortisol levels, or autonomic stabilization matches peer-reviewed studies published in respected clinical papers.
+              When discussing breathing practices (pranayama) and autonomic nervous system effects, we only state what is supported in practical clinical literature. We reference studies on Heart Rate Variability (HRV) and respiratory sinus arrhythmia during slow chanting. We refrain from making claims of physical cures or spiritual miracles, presenting meditation as a supportive, healthy lifestyle habit.
             </p>
           </div>
 
-          {/* Bio 3 */}
+          {/* Sourcing Pillar 3 */}
           <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
-              <span className="text-md font-black text-orange-400">Vivek Shastry, MS (Biomedical Engineering)</span>
-              <span className="text-xs font-mono text-slate-400">Platform Architect & Sound Synthesizer Lead</span>
+              <span className="text-md font-black text-orange-400">Open-Source Technical Volunteers</span>
+              <span className="text-xs font-mono text-slate-400">Independent Developers</span>
             </div>
             <p>
-              Vivek is an experienced software engineer and wellness technology researcher. With a Master's degree in Biomedical Engineering, he specializes in human-computer interaction, real-time signal processing, and browser-based synthesis tools. He designed the sound rendering stack, custom counting cache, and visual pranayama trainers inside other areas of the application.
-            </p>
-            <p>
-              Vivek is dedicated to keeping the Sadhana workspace free of tracking codes, cookies, or remote databases, ensuring complete local data privacy.
+              The code and synthesizer toolsets are engineered by open-source programmers. Our development principles dictate that your data stays strictly on your local browser. We do not track you, sell your information, or require dynamic cloud account configurations.
             </p>
           </div>
         </div>

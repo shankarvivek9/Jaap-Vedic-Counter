@@ -319,21 +319,15 @@ export default function App() {
                   <MissionPage />
                 ) : activeTab === 'jaap' ? (
                   <div className="space-y-6">
-                    <JaapCounter 
-                      onSessionComplete={handleAddSession} 
-                      initialMantraName={preSelectedMantraName}
-                      initialTargetLimit={preSelectedTarget}
-                      onClearInitialMantra={() => {
-                        setPreSelectedMantraName(null);
-                        setPreSelectedTarget(null);
-                      }}
-                    />
                     <HomepageWisdom 
                       onSelectMantra={(mantraName, countValue) => {
                         setPreSelectedMantraName(mantraName);
                         setPreSelectedTarget(countValue);
-                        // Scroll to top of counter smoothly
-                        window.scrollTo({ top: 300, behavior: 'smooth' });
+                        // Scroll to counter smoothly
+                        setTimeout(() => {
+                          const el = document.getElementById('jaap-counter-app-block');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }, 50);
                       }}
                       onNavigateTab={(targetTab) => {
                         let path = '/';
@@ -342,7 +336,17 @@ export default function App() {
                         else if (targetTab === 'wisdom') path = '/blog';
                         handleNavigate(path);
                       }}
-                    />
+                    >
+                      <JaapCounter 
+                        onSessionComplete={handleAddSession} 
+                        initialMantraName={preSelectedMantraName}
+                        initialTargetLimit={preSelectedTarget}
+                        onClearInitialMantra={() => {
+                          setPreSelectedMantraName(null);
+                          setPreSelectedTarget(null);
+                        }}
+                      />
+                    </HomepageWisdom>
                   </div>
                 ) : activeTab === 'meditation' ? (
                   <BreathingGuide />
