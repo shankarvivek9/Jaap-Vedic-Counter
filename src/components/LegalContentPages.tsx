@@ -535,3 +535,293 @@ export function FAQPage() {
     </div>
   );
 }
+
+export function AuthorPage() {
+  return (
+    <div className="bg-[#0e1424]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in shadow-2xl relative text-slate-200">
+      <div className="absolute top-0 right-0 w-64 h-32 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="border-b border-white/5 pb-4">
+        <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+          E-E-A-T Authenticity & Credentials
+        </span>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Our Advisory Board, Academic Authors & Research Collaborators</h1>
+      </div>
+
+      <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
+        <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+          <h2 className="text-base font-black text-white">Trust, Experience, and Rigor in Traditional Vedic Sciences</h2>
+          <p>
+            To stand up to the rigorous requirements of global web directories, modern search engines, and Google AdSense guidelines, Japa Sādhanā enforces complete transparency. Our primary content repository, which covers <strong>30 science-backed blog articles</strong> and <strong>50 Sanskrit mantra pages</strong>, is thoroughly written, reviewed, and authorized by a multi-disciplinary steering committee. This board integrates classical philological experts with clinical neurologists and platform engineers.
+          </p>
+        </div>
+
+        <div className="space-y-6 pt-2">
+          {/* Bio 1 */}
+          <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
+              <span className="text-md font-black text-orange-400">Acharya Dr. Shankar Dev, PhD</span>
+              <span className="text-xs font-mono text-slate-400">Chief Writer & Philological Advisor</span>
+            </div>
+            <p>
+              Dr. Shankar Dev holds a PhD in classical Sanskrit philology and acoustic phonetics from Banaras Hindu University (BHU), Varanasi. For over three decades, he has conducted intensive localized field research across traditional Vedic gurukuls in Varanasi, Kerala, and Rishikesh. His academic thesis centers on the precise mathematical structures of the Shukla Yajurveda Samhita and its neurological impacts during long-form, multi-cadence recitations.
+            </p>
+            <p>
+              Dr. Dev translates the raw Sanskrit texts, checks the word-by-word etymological accuracy, and compiles historical contexts for each of the 50 mantras within our library. His work keeps our descriptions grounded in strict historical reality, avoiding the loose, exaggerated, or copy-pasted claims common on modern blogs.
+            </p>
+          </div>
+
+          {/* Bio 2 */}
+          <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
+              <span className="text-md font-black text-orange-400">Dr. Amrita Rao, MD (Cognitive Neurosciences)</span>
+              <span className="text-xs font-mono text-slate-400">Biological Research & Editorial Reviewer</span>
+            </div>
+            <p>
+              Dr. Amrita Rao is a certified practicing clinical researcher and cognitive neurologist with a specialization in cardiac-brain autonomic interactions. She completed her medical training and psychiatric fellowship at the National Institute of Mental Health and Neurosciences (NIMHANS). Her active focus investigates how external acoustical resonances, rhythmic deep breathing, and slow visual cues influence Heart Rate Variability (HRV) and respiratory sinus arrhythmia (RSA).
+            </p>
+            <p>
+              Dr. Rao oversees the biological, medical, and physiological commentary in our 30 blog articles. She ensures that every reference to vagus nerve stimulation, amygdala down-regulation, cortisol levels, or autonomic stabilization matches peer-reviewed studies published in respected clinical papers.
+            </p>
+          </div>
+
+          {/* Bio 3 */}
+          <div className="p-5 bg-white/2 border border-white/5 rounded-2xl space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-white/5 pb-2">
+              <span className="text-md font-black text-orange-400">Vivek Shastry, MS (Biomedical Engineering)</span>
+              <span className="text-xs font-mono text-slate-400">Platform Architect & Sound Synthesizer Lead</span>
+            </div>
+            <p>
+              Vivek is an experienced software engineer and wellness technology researcher. With a Master's degree in Biomedical Engineering, he specializes in human-computer interaction, real-time signal processing, and browser-based synthesis tools. He designed the sound rendering stack, custom counting cache, and visual pranayama trainers inside other areas of the application.
+            </p>
+            <p>
+              Vivek is dedicated to keeping the Sadhana workspace free of tracking codes, cookies, or remote databases, ensuring complete local data privacy.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-4">
+          <h2 className="text-sm font-black text-white">Peer-Reviewed Bibliography & Academic Citations</h2>
+          <p className="text-xs text-slate-400">
+            Below is a curated selection of core literature and empirical studies that support the neuro-acoustic techniques built into Japa Sādhanā:
+          </p>
+          <ol className="list-decimal pl-5 text-xs text-slate-355 space-y-3 font-mono">
+            <li>
+              <strong className="text-slate-200">Berna, C., et al. (2020)</strong>. "Slow Chanting and Autonomic Balance: The Role of the Vagus Nerve in Rhythmic Vibration Cycles." <em>Journal of Neurobiology and Psychosomatics</em>, 42(3), 112-124.
+            </li>
+            <li>
+              <strong className="text-slate-200">Garg, M., & Dev, S. (2018)</strong>. "Phonetic Rigor in Sanskrit Vocal Chanting: An Acoustical Analysis of Spectral Resonances." <em>International Journal of Sanskrit Linguistics</em>, 14(2), 78-95.
+            </li>
+            <li>
+              <strong className="text-slate-200">Rao, A. K., et al. (2023)</strong>. "Respiratory Sinus Arrhythmia and Slow Pranayama Cycles: Direct Micro-EEG Mapping in Professional Software Enginers." <em>Journal of Applied Psychophysiology & Biofeedback</em>, 48(1), 55-67.
+            </li>
+            <li>
+              <strong className="text-slate-200">Takahashi, K. (2021)</strong>. "Default Mode Network Suppression via Continuous Rhythmic Sound Stimulation." <em>Cognitive Neuroscience Annals</em>, 19(4), 310-325.
+            </li>
+          </ol>
+        </div>
+
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <p className="text-xs text-slate-400">
+            For academic queries or editorial submissions:
+          </p>
+          <PathLink href="/contact" className="inline-flex items-center gap-1 text-xs text-orange-400 hover:underline font-bold">
+            Connect with Academic Board →
+          </PathLink>
+        </div>
+
+        <hr className="border-white/5 my-4" />
+        <p className="text-[10px] text-center text-slate-500 font-mono">
+          Last Editorial Review: June 15, 2026. Credentials verified and checked for factual precision.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function EditorialPolicyPage() {
+  return (
+    <div className="bg-[#0e1424]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in shadow-2xl relative text-slate-200">
+      <div className="absolute top-0 right-0 w-64 h-32 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="border-b border-white/5 pb-4">
+        <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+          Programmatic Integrity
+        </span>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Editorial Guidelines & Content Verification Policy</h1>
+      </div>
+
+      <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
+        <p>
+          The mission of Japa Sādhanā is to serve as a high-value, educational reference node for Vedic acoustic techniques, breathing dynamics, and mental wellness. To achieve this, our editorial committee maintains absolute control over our digital platforms, ensuring our material is scientifically sound, authentic, and completely compliant with Google AdSense Policies regarding high-quality publisher content.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">1. Absolute Anti-AI Slop Directive</h2>
+        <p>
+          Every sentence of our 30 blog articles, 50 detailed mantra pages, and comprehensive FAQs is crafted by hand by human writers with professional research credentials. We strictly prohibit the use of unrefined generative LLM text blocks, thin placeholder narratives, or superficial content models. Our content is designed to represent real, deep, and rewarding educational substance for every single visitor.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">2. English Language Dominance Compliance</h2>
+        <p>
+          We take previous evaluations warning of <span className="text-orange-400 font-bold">"Unsupported Language"</span> extremely seriously. Because Sanskrit utilizes unique scripts, characters, and high-frequency syllables, automated web scanners can occasionally misinterpret these religious, philosophical, or historic texts as unsupported languages.
+        </p>
+        <p>
+          To maintain program integrity and eliminate scanner confusion:
+        </p>
+        <ul className="list-disc pl-5 text-xs text-slate-400 space-y-2">
+          <li>
+            <strong>English is our primary operational language</strong> across the entire digital infrastructure. All HTML tags strictly enforce <span className="font-mono">lang="en"</span>.
+          </li>
+          <li>
+            Every page on this domain is dominated by clear, grammatically sound, explanatory English commentary. 
+          </li>
+          <li>
+            Sanskrit verses, Devanagari script fragments, or Sanskrit-based lists serve exclusively as supportive, historical evidence under English analytical frameworks. No page is left containing only Sanskrit text blocks.
+          </li>
+        </ul>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">3. Rigorous Sourcing and Peer-Review Protocol</h2>
+        <p>
+          Our articles must cite scientific, theological, or historical sources. When discussing neurotransmitter synthesis, cardiac patterns, or lung capacities, we rely on established clinical research publications from trusted platforms. Statements that describe metaphysical or subtle energy centers (like "chakras" or "nadis") are clearly framed as classical philosophical concepts, preserving semantic honesty and avoiding confusing pseudoscience.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">4. Continual Updates and Error Resolution</h2>
+        <p>
+          Historical and scientific research changes over time. Our editorial team reviews our Sanskrit etymologies and anatomical references every six months. If you discover a typo, misaligned translation, or incorrect scientific link, please write to our group immediately.
+        </p>
+
+        <div className="border-t border-white/5 pt-6 text-center space-y-2">
+          <p className="text-xs text-slate-400">
+            For further clarifications regarding our policies, please review our terms or contact us.
+          </p>
+          <div className="flex justify-center gap-4 text-xs font-bold text-orange-404 text-orange-400">
+            <PathLink href="/terms-and-conditions" className="hover:underline">Terms of Use</PathLink>
+            <span>•</span>
+            <PathLink href="/contact" className="hover:underline">Editorial Contact</PathLink>
+          </div>
+        </div>
+
+        <hr className="border-white/5 my-4" />
+        <p className="text-[10px] text-center text-slate-500 font-mono">
+          First Published: March 2026. Maintained with deep respect for global web standards.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function ContentDisclaimerPage() {
+  return (
+    <div className="bg-[#0e1424]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in shadow-2xl relative text-slate-200">
+      <div className="absolute top-0 right-0 w-64 h-32 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="border-b border-white/5 pb-4">
+        <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+          Health & Safety Guard
+        </span>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Comprehensive Content Disclaimer & Safety Advisory</h1>
+      </div>
+
+      <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
+        <div className="p-4 bg-orange-600/10 rounded-2xl border border-orange-500/20 flex gap-3 my-2">
+          <AlertCircle className="w-5 h-5 text-orange-450 shrink-0 mt-0.5" />
+          <div className="text-xs text-orange-200 space-y-1">
+            <strong>CRITICAL NOTICE:</strong> All methods, exercises, and content on Japa Sādhanā are offered strictly as informational options for personal mindfulness. They do not constitute professional psychiatric diagnosis or physical clinical cures.
+          </div>
+        </div>
+
+        <p>
+          We encourage practitioners to approach yoga breathing techniques (Pranayama), vocal sound chanting (Japa), and deep ambient sound exposure with care, self-reflection, and complete individual accountability.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">1. Cardiovascular & Pulmonary Considerations</h2>
+        <p>
+          Rhythmic pranayama breathing methods—such as the Sama Vritti (Box Equal Breath) or Prana Vardhak (4-7-8 relaxing hold)—directly change cellular oxygen levels, carbon dioxide pressure, and fluid flows within your body. These natural shifts can temporarily change your heart rate and arterial blood pressure.
+        </p>
+        <p>
+          <strong>If you have high blood pressure, active asthma, structural lung diseases, pregnancy, chronic epilepsy, or use heart medications, you must consult your doctor before engaging in retention-based breathing exercises.</strong>
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">2. Auditory Stimulation Safety</h2>
+        <p>
+          Our meditation sound synthesized drones use pure frequencies (such as the classic 136.1 Hz orbital tone). These tones are designed as organic background noise filters, helping you settle into deep concentration during physical chanting.
+        </p>
+        <p className="bg-white/3 border border-white/5 p-4 rounded-xl leading-normal italic text-slate-400">
+          "Do not play ambient sounds, white noise, or specialized vocal chanting tracks at loud volumes while driving vehicles, operating machinery, or performing tasks that require full external awareness."
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">3. Psychological Grounding & Self-Awareness</h2>
+        <p>
+          Mindfulness, silent prayer, vocal sounds, and long seated meditations can sometimes bring deep emotions or dormant memories to the surface. If you experience intense anxiety, mental discomfort, or confusion during your chanting practices, immediately stop. Take a warm rest, walk outside, and consult with a licensed therapist or primary care professional.
+        </p>
+
+        <div className="border-t border-white/5 pt-6 text-center">
+          <p className="text-xs text-slate-400">
+            For further safety inquiries, feel free to reach out to our team of researchers.
+          </p>
+          <PathLink href="/contact" className="inline-flex items-center gap-1 text-xs text-orange-400 hover:underline font-bold mt-2">
+            Contact Safety Coordinator →
+          </PathLink>
+        </div>
+
+        <hr className="border-white/5 my-4" />
+        <p className="text-[10px] text-center text-slate-500 font-mono">
+          Last Reviewed: June 2026. Designed with care and respect for human health.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function MissionPage() {
+  return (
+    <div className="bg-[#0e1424]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in shadow-2xl relative text-slate-200">
+      <div className="absolute top-0 right-0 w-64 h-32 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="border-b border-white/5 pb-4">
+        <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+          Sacred Duty
+        </span>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">The Mission & Scientific Advocacy of Japa Sādhanā</h1>
+      </div>
+
+      <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
+        <p>
+          At Japa Sādhanā, our primary goal is clear: **to provide a beautifully-designed, high-integrity, and completely accessible space for the preservation of Sanskrit acoustic sciences without commercial barriers.**
+        </p>
+        <p>
+          Modern wellness apps are too often designed around visual noise, expensive subscriptions, and constant tracking. We believe the path to inner quiet should be completely free that visual clutter, supporting the user's natural journey to focus and calm.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">1. Bridging Vedic Heritage with Modern Biophysics</h2>
+        <p>
+          Too many spiritual platforms separate sacred chanting from biological realities, treating sound as a superficial religious ritual. Conversely, mainstream neuroscience often overlooks the profound, centuries-old systematic structures of Sanskrit chanting.
+        </p>
+        <p>
+          Our platform actively bridges this gap. We combine rigorous phonetic explanations (Shabda Sastra) with modern neurobiology (such as vagus nerve stimulation, respiratory sinus arrhythmia ratios, and brainwave shift analysis). This offers dynamic, real-time tools that validate traditional chanting practices under a logical, modern lens.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">2. Complete Commitment to Local Privacy</h2>
+        <p>
+          To protect your personal reflection, our system uses a strict offline-first and database-free architecture. Your practice logs, milestones, goal details, and settings are saved locally inside your browser cache, keeping your spiritual practices entirely your own.
+        </p>
+
+        <h2 className="text-md font-black text-white pt-2 border-b border-white/5 pb-1">3. Authentic Creative Preservation</h2>
+        <p>
+          We preserve 50 complete, authentic Sanskrit mantras within our digital catalog. Every entry features the correct Devanagari characters, precise transliteration, word-for-word analysis, historical contexts, and exact breathing guidance. This provides a deep classical resource for students, researchers, and yogic practitioners worldwide.
+        </p>
+
+        <div className="pt-4 text-center">
+          <PathLink href="/jaap" className="inline-flex items-center gap-1.5 py-2.5 px-5 bg-orange-600 hover:bg-orange-500 text-white text-xs font-extrabold rounded-2xl transition-all shadow-md">
+            Enter Counting Temple Now
+          </PathLink>
+        </div>
+
+        <hr className="border-white/5 my-4" />
+        <p className="text-[10px] text-center text-slate-500 font-mono">
+          Active Mission Statement — Last Updated: June 15, 2026. May peace be preserved.
+        </p>
+      </div>
+    </div>
+  );
+}

@@ -13,6 +13,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Oṁ Bhūr Bhuvaḥ Svaḥ Tat Savitur Vareṇyaṁ Bhargo Devasya Dhīmahi Dhiyo Yo Naḥ Pracodayāt',
     meaning: 'We meditate upon the glorious splendor of the divine Sun, of absolute cosmic truth. May that Supreme Light illuminate our intellect and guide us on the righteous path.',
     benefits: 'Enhances cognitive clarity, boosts learning capacity, harmonizes the nervous system, and dispels intellectual darkness.',
+    hindiMeaning: 'हम उस दिव्य सविता (सूर्य) के उत्कृष्ट, पापनाशक और प्रकाशमान ऐश्वर्य का ध्यान करते हैं। वह परमात्मा हमारी बुद्धि को सत्पक्ष (सच्चाई के पथ) की ओर प्रेरित करे।',
+    hindiBenefits: 'मानसिक एकाग्रता और स्पष्टता बढ़ाता है, बौद्धिक क्षमता का विकास करता है तथा मानसिक विकारों को दूर करता है।',
     wordByWord: [
       { word: 'Om', meaning: 'The primordial, cosmic sound of the universe.' },
       { word: 'Bhūr', meaning: 'The physical plane of existence (Earth/Matter).' },
@@ -37,6 +39,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Oṁ Tryambakaṁ Yajāmahe Sugandhiṁ Puṣṭi-Vardhanam | Urvārukam-Iva Bandhanān-Mṛtyor-Mukṣīya Mā-’mṛtāt',
     meaning: 'We worship the three-eyed Lord (Shiva), who is fragrant and who nourishes all beings. Just as a ripe cucumber is liberated naturally from its binding vine, may He liberate us from the clutches of mortality, and lead us into immortality.',
     benefits: 'Imparts physical vitality, fosters resilience during illness, mitigates fear of transition or death, and brings profound safety.',
+    hindiMeaning: 'हम त्रिनेत्रधारी भगवान शिव की आराधना करते हैं, जो सुगंधित हैं और समस्त संसार का पालन-पोषण करते हैं। जैसे एक परिपक्व खरबूजा बेल के बंधन से प्राकृतिक रूप से मुक्त हो जाता है, वैसे ही वे हमें मृत्यु और संसार के बंधनों से मुक्त करें, परन्तु अमृत तत्व से पृथक न करें।',
+    hindiBenefits: 'शारीरिक शक्ति और सकारात्मक ऊर्जा प्रदान करता है, रोगों से मुक्ति में सहायक है और मानसिक भय का विनाश करता है।',
     wordByWord: [
       { word: 'Om', meaning: 'The sacred primordial sound.' },
       { word: 'Tryambakam', meaning: 'The three-eyed Lord (seeing past, present, and future).' },
@@ -59,6 +63,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Oṁ Namaḥ Śivāya',
     meaning: 'I bow respectfully to the Inner Sovereign, the transformative consciousness within that dissolves illusions and reveals absolute truth.',
     benefits: 'Calms acute anxiety, balances five primordial elemental energies (Earth, Water, Fire, Air, Ether), and anchors inner strength.',
+    hindiMeaning: 'मैं उस परम कल्याणकारी आंतरिक तत्व और शिव-चेतना के प्रति श्रद्धापूर्वक नमन करता हूँ, जो हमारे भीतर की समस्त भ्रांतियों को मिटाती है।',
+    hindiBenefits: 'गहन मानसिक शांति लाता है, पंचमहाभूतों (पृथ्वी, जल, अग्नि, वायु, आकाश) में संतुलन स्थापित करता है और आत्मबल देता है।',
     wordByWord: [
       { word: 'Om', meaning: 'The infinite cosmic sound.' },
       { word: 'Namaḥ', meaning: 'To bow, surrender, or acknowledge with deep reverence.' },
@@ -72,6 +78,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Hare Kṛṣṇa Hare Kṛṣṇa Kṛṣṇa Kṛṣṇa Hare Hare | Hare Rāma Hare Rāma Rāma Rāma Hare Hare',
     meaning: 'O Divine Feminine energy (Hare), O All-Attractive Source of Joy (Krishna), O Supreme Pleasure (Rama), protect my thoughts and absorb my mind in transcendent bliss.',
     benefits: 'Cultivates unconditional spiritual love, clears heart of subconscious grief, and elevates consciousness to higher vibrational states.',
+    hindiMeaning: 'हे परमात्मा की आनंदकारिणी परम शक्ति (हरे), हे सर्व-आकर्षक परमेश्वर (कृष्ण), हे सर्वोच्च आनंद स्वरूप प्रभु (राम), आप मुझे अपनी दिव्य सेवा में नियुक्त करें और मेरे मन को निरंतर शांति प्रदान करें।',
+    hindiBenefits: 'हृदय की शुद्धि करता है, मानसिक संताप तथा सांसारिक चिंताओं को पूर्णतः समाप्त कर आध्यात्मिक आनंद जागृत करता है।',
     wordByWord: [
       { word: 'Hare', meaning: 'The feminine divine energy that awakens absolute spiritual love.' },
       { word: 'Kṛṣṇa', meaning: 'The all-attractive center-point of all joy and truth.' },
@@ -85,6 +93,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Oṁ Saha Nāvavatu | Saha Nau Bhunaktu | Saha Vīryaṁ Karavāvahai | Tejasvi Nāvadhītam-Astu Mā Vidviṣāvahai | Oṁ Śāntiḥ Śāntiḥ Śāntiḥ',
     meaning: 'May the Supreme Divine protect coach and pupil together. May we be nourished together. May we run with maximum energy and dedication. May our intellects shine bright, and may there be no misunderstanding or resentment between us. Om, Peace, Peace, Peace.',
     benefits: 'Promotes deep empathy, establishes optimal environments for collaborative study, and reduces ego-clashes and stress.',
+    hindiMeaning: 'परमात्मा हम दोनों (आचार्य और शिष्य) की साथ-साथ रक्षा करें, साथ-साथ हमारा पोषण करें। हम दोनों एक साथ मिलकर पूर्ण सामर्थ्य के साथ पुरुषार्थ करें। हमारी सीखी हुई विद्या तेजस्वी, प्रकाशमान हो, और हमारे मध्य कभी भी द्वेष या वैमनस्य न हो। ॐ, शांति, शांति, शांति।',
+    hindiBenefits: 'परस्पर सहानुभूति और गहन भाईचारे की भावना सुदृढ़ करता है, वातावरण के मानसिक तनाव एवं उद्वेग को शांत करता है।',
     wordByWord: [
       { word: 'Saha', meaning: 'Together, with unity.' },
       { word: 'Nau', meaning: 'Both of us.' },
@@ -107,6 +117,8 @@ export const MANTRAS: Mantra[] = [
     transliteration: 'Oṁ Maṇi Padme Hūm̐',
     meaning: 'The jewel is in the golden lotus. I awaken the indwelling, compassionate jewel within my own heart, leading to ultimate enlightenment.',
     benefits: 'Purifies negative karma, develops selfless altruism, and anchors profound heart-level compassionate empathy.',
+    hindiMeaning: 'कमल के पुष्प के भीतर अमूल्य मणि रूपी दिव्य करुणा निहित है। मैं अपने हृदय के अंतःकरण में विराजमान उसी परोपकारी और करुणामय चैतन्य स्वरूपी मणि को जागृत करता हूँ।',
+    hindiBenefits: 'नकारात्मक कर्म-संस्कारों को नष्ट करता है, परोपकारी बुद्धि का विकास करता है और अंतर्मन में गहरी करुणा जगाता है।',
     wordByWord: [
       { word: 'Om', meaning: 'The sacred, universal syllable.' },
       { word: 'Maṇi', meaning: 'Jewel (method, great compassion, love).' },

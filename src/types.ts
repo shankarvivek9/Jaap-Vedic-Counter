@@ -10,6 +10,8 @@ export interface Mantra {
   transliteration: string;
   meaning: string;
   benefits: string;
+  hindiMeaning?: string;
+  hindiBenefits?: string;
   wordByWord?: { word: string; meaning: string }[];
   translationHint?: string;
 }

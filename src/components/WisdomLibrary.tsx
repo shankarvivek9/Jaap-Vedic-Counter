@@ -283,20 +283,39 @@ export default function WisdomLibrary() {
 
                   {/* Absolute translation meanings */}
                   <div>
-                    <span className="text-[9px] font-mono font-bold tracking-wider text-slate-400 uppercase block mb-1">MANTRA MEANING</span>
+                    <span className="text-[9px] font-mono font-bold tracking-wider text-slate-400 uppercase block mb-1">MANTRA MEANING (English)</span>
                     <p className="text-xs text-slate-200 leading-relaxed font-sans font-medium text-justify p-3 bg-white/5 rounded-xl border border-white/5">
                       {selectedMantra.meaning}
                     </p>
                   </div>
 
+                  {selectedMantra.hindiMeaning && (
+                    <div>
+                      <span className="text-[9px] font-mono font-bold tracking-wider text-orange-400 uppercase block mb-1">मंत्र अर्थ (हिन्दी)</span>
+                      <p className="text-xs text-orange-100 leading-relaxed font-serif text-justify p-3 bg-white/5 rounded-xl border border-orange-500/10">
+                        {selectedMantra.hindiMeaning}
+                      </p>
+                    </div>
+                  )}
+
                   {/* Dedicated spiritual benefits */}
                   <div>
-                    <span className="text-[9px] font-mono font-bold tracking-wider text-slate-400 uppercase block mb-1">BIO-ENERGY BENEFITS</span>
+                    <span className="text-[9px] font-mono font-bold tracking-wider text-slate-400 uppercase block mb-1">BIO-ENERGY BENEFITS (English)</span>
                     <p className="text-xs text-amber-300 font-sans font-semibold p-3 bg-amber-500/5 rounded-xl border border-amber-500/10 flex items-start gap-2 leading-relaxed">
                       <Star className="w-4 h-4 text-amber-400 shrink-0 mt-0.5 fill-current animate-pulse" />
                       <span>{selectedMantra.benefits}</span>
                     </p>
                   </div>
+
+                  {selectedMantra.hindiBenefits && (
+                    <div>
+                      <span className="text-[9px] font-mono font-bold tracking-wider text-orange-400 uppercase block mb-1">साधना के दिव्य लाभ (हिन्दी)</span>
+                      <p className="text-xs text-orange-200 font-serif font-medium p-3 bg-orange-500/5 rounded-xl border border-orange-500/10 flex items-start gap-2 leading-relaxed">
+                        <Star className="w-4 h-4 text-orange-400 shrink-0 mt-0.5 fill-current" />
+                        <span>{selectedMantra.hindiBenefits}</span>
+                      </p>
+                    </div>
+                  )}
 
                   {/* Word by word breakdown list if present */}
                   {selectedMantra.wordByWord && (

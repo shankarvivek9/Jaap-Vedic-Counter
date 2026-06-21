@@ -13,7 +13,15 @@ import HistoryDashboard from './components/HistoryDashboard';
 import SpiritualKnowledgeHub from './components/SpiritualKnowledgeHub';
 import HomepageWisdom from './components/HomepageWisdom';
 import { ChantingSession } from './types';
-import { AboutPage, ContactPage, PrivacyPolicyPage, TermsConditionsPage, DisclaimerPage, FAQPage } from './components/LegalContentPages';
+import { AboutPage, ContactPage, PrivacyPolicyPage, TermsConditionsPage, DisclaimerPage, FAQPage, AuthorPage, EditorialPolicyPage, ContentDisclaimerPage, MissionPage } from './components/LegalContentPages';
+
+// Helper to normalize pathnames for absolute consistency (e.g. stripping trailing slashes)
+const normalizePath = (path: string): string => {
+  if (!path) return '/';
+  const clean = path.split('?')[0].split('#')[0];
+  if (clean === '/') return '/';
+  return clean.endsWith('/') ? clean.slice(0, -1) : clean;
+};
 
 // Curated list of inspirational spiritual verses for the ticker
 const DAILY_VERSES = [
@@ -24,7 +32,7 @@ const DAILY_VERSES = [
 ];
 
 export default function App() {
-  const [pathname, setPathname] = useState<string>(window.location.pathname);
+  const [pathname, setPathname] = useState<string>(() => normalizePath(window.location.pathname));
   const [sessions, setSessions] = useState<ChantingSession[]>([]);
   const [verseIndex, setVerseIndex] = useState<number>(0);
   const [modalSection, setModalSection] = useState<'about' | 'contact' | 'privacy' | 'terms' | 'disclaimer' | null>(null);
@@ -39,7 +47,7 @@ export default function App() {
   // URL route parsing engine
   useEffect(() => {
     const handleUrlRouting = () => {
-      const path = window.location.pathname;
+      const path = normalizePath(window.location.pathname);
       setPathname(path);
 
       if (path.startsWith('/blog/')) {
@@ -69,8 +77,9 @@ export default function App() {
   }, []);
 
   const handleNavigate = (path: string) => {
-    window.history.pushState(null, '', path);
-    setPathname(path);
+    const cleanPath = normalizePath(path);
+    window.history.pushState(null, '', cleanPath);
+    setPathname(cleanPath);
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
@@ -130,8 +139,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
           <Sparkles className="w-3.5 h-3.5 text-yellow-400 animate-pulse fill-current" />
           <span className="font-semibold italic">Dhāraṇā & Japa:</span>
-          <span className="hidden sm:inline">"Mananāt trāyate iti mantraḥ" — That which protects the mind when contemplated is a Mantra.</span>
-          <span className="sm:hidden">That which protects is a Mantra.</span>
+          <span className="hidden sm:inline">"That which protects the mind when contemplated is a Mantra."</span>
+          <span className="sm:hidden">"That which protects is a Mantra."</span>
         </div>
       </div>
 
@@ -294,6 +303,14 @@ export default function App() {
                   <TermsConditionsPage />
                 ) : pathname === '/disclaimer' ? (
                   <DisclaimerPage />
+                ) : pathname === '/author' ? (
+                  <AuthorPage />
+                ) : pathname === '/editorial-policy' ? (
+                  <EditorialPolicyPage />
+                ) : pathname === '/content-disclaimer' ? (
+                  <ContentDisclaimerPage />
+                ) : pathname === '/mission' ? (
+                  <MissionPage />
                 ) : activeTab === 'jaap' ? (
                   <div className="space-y-6">
                     <JaapCounter 
@@ -385,11 +402,35 @@ export default function App() {
             </a>
             <span>•</span>
             <a 
+              href="/mission"
+              onClick={(e) => { e.preventDefault(); handleNavigate('/mission'); }} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none text-orange-405 text-orange-450 font-bold animate-pulse"
+            >
+              Mission
+            </a>
+            <span>•</span>
+            <a 
               href="/contact"
               onClick={(e) => { e.preventDefault(); handleNavigate('/contact'); }} 
               className="hover:text-slate-200 cursor-pointer focus:outline-none"
             >
-              Contact Us
+              Contact
+            </a>
+            <span>•</span>
+            <a 
+              href="/author"
+              onClick={(e) => { e.preventDefault(); handleNavigate('/author'); }} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none font-bold"
+            >
+              Editorial Authors
+            </a>
+            <span>•</span>
+            <a 
+              href="/editorial-policy"
+              onClick={(e) => { e.preventDefault(); handleNavigate('/editorial-policy'); }} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none"
+            >
+              Editorial Policy
             </a>
             <span>•</span>
             <a 
@@ -414,6 +455,14 @@ export default function App() {
               className="hover:text-slate-200 cursor-pointer focus:outline-none"
             >
               Disclaimer
+            </a>
+            <span>•</span>
+            <a 
+              href="/content-disclaimer"
+              onClick={(e) => { e.preventDefault(); handleNavigate('/content-disclaimer'); }} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none text-red-400"
+            >
+              Safety Advisory
             </a>
             <span>•</span>
             <a 

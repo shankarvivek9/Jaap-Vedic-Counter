@@ -451,21 +451,41 @@ export default function JaapCounter({
             </div>
 
             {/* Benefit highlights */}
-            <div className="mt-4 flex items-start gap-2 text-xs text-amber-100 bg-orange-600/15 border border-orange-500/30 p-3 rounded-2xl">
-              <Sparkles className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="font-semibold block text-orange-300 mt-0.5">Sadhana Benefit</strong>
-                {selectedMantra.benefits}
+            <div className="mt-4 flex flex-col gap-3 text-xs text-amber-100 bg-orange-600/15 border border-orange-500/30 p-3.5 rounded-2xl">
+              <div className="flex items-start gap-2">
+                <Sparkles className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="font-semibold block text-orange-300">Sadhana Benefit</strong>
+                  {selectedMantra.benefits}
+                </div>
               </div>
+              {selectedMantra.hindiBenefits && (
+                <div className="flex items-start gap-2 border-t border-orange-500/10 pt-2.5">
+                  <span className="text-[9px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/10 rounded-full border border-orange-500/20 shrink-0">हिन्दी अनुवाद</span>
+                  <div className="text-orange-200 leading-normal font-medium">
+                    {selectedMantra.hindiBenefits}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* English meaning */}
             <div className="mt-4">
-              <span className="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase">Spiritual Substance</span>
+              <span className="text-[10px] font-mono font-bold tracking-wider text-slate-400 uppercase">Spiritual Substance (English)</span>
               <p className="text-xs text-slate-300 mt-1 leading-relaxed font-sans font-medium text-justify">
                 {selectedMantra.meaning}
               </p>
             </div>
+
+            {/* Hindi meaning */}
+            {selectedMantra.hindiMeaning && (
+              <div className="mt-4 pt-3 border-t border-white/5">
+                <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase">मंत्र अर्थ (हिन्दी)</span>
+                <p className="text-xs text-orange-100 mt-1 leading-relaxed font-serif text-justify font-medium">
+                  {selectedMantra.hindiMeaning}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Word by word breakdown Sheet trigger */}
