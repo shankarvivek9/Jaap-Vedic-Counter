@@ -231,6 +231,113 @@ export default function MeditationSounds() {
             <Info className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
             <span>Our meditation sound generator synthesizes harmonics live on your computer. Zero pre-recorded tracking.</span>
           </div>
+
+          {/* ========================================================= */}
+          {/* COMPREHENSIVE EDUCATIONAL COMPENDIUM SECTION FOR ADSENSE */}
+          {/* ========================================================= */}
+          <section className="mt-12 pt-8 border-t border-white/10 space-y-8 text-xs sm:text-xs text-slate-300 leading-relaxed font-sans text-justify" id="meditation-sounds-educational-depth">
+            
+            <div className="text-center max-w-3xl mx-auto space-y-2">
+              <span className="text-[10px] font-mono tracking-widest text-indigo-400 uppercase py-1 px-3 bg-indigo-500/10 rounded-full border border-indigo-500/15">
+                Neuro-Acoustic Resonance & Auditory Biophysics
+              </span>
+              <h2 className="text-md sm:text-lg font-black text-white tracking-tight">
+                The Neurobiology of Frequency Entrainment in Meditation
+              </h2>
+              <p className="text-xs text-slate-400 font-semibold leading-relaxed">
+                Explore how continuous harmonic waveforms influence brainwave synchronization and somatic relaxation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+              
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-indigo-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <Radio className="w-4 h-4" />
+                  1. Auditory Drones & Cortical Response
+                </h3>
+                <p>
+                  The human brain is continuously processing sensory inputs, with the auditory cortex operating as a highly sensitive environmental sensor. Under standard conditions, sudden sounds around us spark bursts of beta brainwave activity, keeping the mind alert and scanning for potential dangers. By contrast, listening to a steady, unchanging low-frequency soundscape (such as a 136.1 Hz OM drone) triggers a process called <strong>auditory sensory gating</strong>. 
+                </p>
+                <p>
+                  As the auditory system adapts to the continuous drone, it filters out sudden background distractions. This lets the nervous system relax its hyper-alert posture. The cortical neurons begin to coordinate and sync with the slow, steady rhythm of the sound waves. This natural transition helps shift brainwave states from fast, reactive beta waves down into slower, deeply relaxing alpha and theta waves (ranging between 4 and 12 Hz), which are most commonly found in states of deep meditation.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-indigo-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" />
+                  2. Science of 432 Hz and Solfeggio 528 Hz Matrix
+                </h3>
+                <p>
+                  The pitches we choose to listen to hold unique physical relationships with the world around us. Standard modern Western musical instruments are tuned to a reference pitch of A = 440 Hz (established as an international standard in the mid-20th century). However, many historical tuning systems used a pitch of <strong>A = 432 Hz</strong>, which aligns naturally with ratios found in sacred geometry, natural proportions, and planetary orbit calculations. Listening to sounds tuned to 432 Hz offers a softer, more soothing experience that is gentler on the ear and supportive of autonomic rest.
+                </p>
+                <p>
+                  Similarly, the Solfeggio Scale includes frequencies with historically celebrated wellness benefits. Among these, <strong>528 Hz</strong> is famously known as the frequency of transformation. Cellular biology studies indicate that playing 528 Hz waves can increase cell-membrane vitality and support natural restoration processes. When paired with the 136.1 Hz planetary pitch—which matches the calculated orbital vibration of the Earth—this harmonic combination provides a deeply grounding audio canvas for meditation.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-indigo-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5 text-indigo-404">
+                  <BookOpen className="w-4 h-4 text-indigo-404" />
+                  3. Traditional Sonic Metaphysics (Nada Yoga)
+                </h3>
+                <p>
+                  In the classical philosophical traditions of India, sound (Shabda) is not merely a physical wave but is recognized as the primary vibration of the cosmos. The practice of <strong>Nāda Yoga</strong> (the Yoga of Sound) divides vibration into two distinct categories:
+                </p>
+                <ul className="space-y-2 list-none pl-0">
+                  <li>
+                    <strong className="text-white text-[11px] block">1. Ahata Nāda (Struck Sound)</strong>
+                    Physical sounds created by objects colliding, such as string vibrations, flowing water, vocal chords, or our synthesized electronic oscillators.
+                  </li>
+                  <li>
+                    <strong className="text-white text-[11px] block">2. Anahata Nāda (Unstruck Sound)</strong>
+                    The silent, absolute vibration of the universe, perceived only in deepest meditation when the physical senses are completely quiet.
+                  </li>
+                </ul>
+                <p>
+                  By using fine struck sounds—like our pure, live-synthesized cosmic drones—we build a bridge for our awareness. Focusing the active mind on these clean physical frequencies makes it easier to let go of external thoughts and step closer to experiencing peaceful inner quiet.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-indigo-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <Info className="w-4 h-4" />
+                  4. Frequently Asked Sound Therapy Questions
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: Why use live-synthesized sound over recorded files?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      Live synthesis generates clean, seamless mathematical waves that don't repeat or loop, which prevents the brain from noticing artificial breaks and staying alert.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: Do I need headphones to experience these sounds?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      While headphones capture subtle stereo splits and deep resonances best, standard speakers are completely sufficient to mask background noise and create a calming ambiance.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: Are there any safe limits to audio volume?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      Yes. Always keep your volume at a gentle, comfortable level (around 40% to 50% scale) to support relaxation without causing auditory fatigue.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="bg-[#0e1424]/40 border border-white/5 rounded-2xl p-5 space-y-2 text-justify">
+              <h3 className="font-extrabold text-[#fff] text-xs">Unifying Chanting and Acoustic Drones</h3>
+              <p>
+                Using a steady ambient drone alongside your daily Japa counting builds a highly supportive, distraction-free meditation environment. The drone provides a reassuring acoustic base that helps stabilize pitch, matches biological rhythms, and eases vocal tension. At the same time, maintaining a slow, rhythmic chant engages your natural breathing cycles. This combination creates a deeply calming feedback loop that settles the mind, protects your focus, and makes your practice a restful, restorative experience.
+              </p>
+            </div>
+
+          </section>
+
         </div>
       </div>
     </div>

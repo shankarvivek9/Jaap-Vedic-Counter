@@ -20,6 +20,7 @@ interface SpiritualKnowledgeHubProps {
   onNavigateMantra?: (id: string | null) => void;
   activeGuideId?: string | null;
   onNavigateGuide?: (id: string | null) => void;
+  onNavigate?: (path: string) => void;
 }
 
 export default function SpiritualKnowledgeHub({
@@ -29,7 +30,8 @@ export default function SpiritualKnowledgeHub({
   activeMantraId,
   onNavigateMantra,
   activeGuideId,
-  onNavigateGuide
+  onNavigateGuide,
+  onNavigate
 }: SpiritualKnowledgeHubProps) {
   const [subTab, setSubTab] = useState<'mantras' | 'articles' | 'guides' | 'faqs' | 'sitemap'>('mantras');
   const [searchQuery, setSearchQuery] = useState('');
@@ -557,7 +559,7 @@ export default function SpiritualKnowledgeHub({
                               {p.includes("Japa") || p.includes("mantra") ? (
                                 <span>
                                   {p} Enjoy chanting via our prominent{" "}
-                                  <a href="#/jaap" className="text-orange-450 hover:underline inline-flex items-center font-bold">
+                                  <a href="/" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/'); }} className="text-orange-450 hover:underline inline-flex items-center font-bold">
                                     Jaap Counter tool
                                   </a>.
                                 </span>
@@ -583,7 +585,7 @@ export default function SpiritualKnowledgeHub({
                           8 Spiritual Handbooks
                         </button>{" "}
                         or check classical sounds inside the{" "}
-                        <a href="#/sounds" className="text-orange-400 hover:underline font-black">
+                        <a href="/sounds" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/sounds'); }} className="text-orange-400 hover:underline font-black">
                           Drone Synthesizer
                         </a>.
                       </p>
@@ -702,7 +704,7 @@ export default function SpiritualKnowledgeHub({
 
                 <div className="border-t border-white/5 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                   <span className="text-slate-450 font-bold font-mono">Status: Pure Sattvic Instruction</span>
-                  <a href="#/jaap" className="text-orange-400 hover:underline font-black flex items-center gap-1.5 focus:outline-none">
+                  <a href="/" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('/'); }} className="text-orange-400 hover:underline font-black flex items-center gap-1.5 focus:outline-none">
                     Start Countdown Now →
                   </a>
                 </div>

@@ -332,6 +332,103 @@ export default function HistoryDashboard({ sessions, onDeleteSession, onClearAll
             <Database className="w-4 h-4 text-orange-400 shrink-0" />
             <span>Completed Japa runs are stored locally on your device via browser HTML5 local storage.</span>
           </div>
+
+          {/* ========================================================= */}
+          {/* COMPREHENSIVE EDUCATIONAL COMPENDIUM SECTION FOR ADSENSE */}
+          {/* ========================================================= */}
+          <section className="mt-12 pt-8 border-t border-white/10 space-y-8 text-xs sm:text-xs text-slate-300 leading-relaxed font-sans text-justify" id="sadhana-journal-educational-depth">
+            
+            <div className="text-center max-w-3xl mx-auto space-y-2">
+              <span className="text-[10px] font-mono tracking-widest text-orange-400 uppercase py-1 px-3 bg-orange-500/10 rounded-full border border-orange-500/15">
+                Spiritual Science & Habit Psychology
+              </span>
+              <h2 className="text-md sm:text-lg font-black text-white tracking-tight">
+                The Science of Sadhana Journaling & Mental Calibration
+              </h2>
+              <p className="text-xs text-slate-400 font-semibold leading-relaxed">
+                Understand how logging your meditative efforts supports long-term habit formation and mental discipline.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+              
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-orange-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <Award className="w-4 h-4" />
+                  1. The Tradition of Sadhana Patra (Yoga Diaries)
+                </h3>
+                <p>
+                  In traditional yogic schools, maintaining an honest, written record of one's daily spiritual practices (called a <strong>Sādhana Patra</strong>) was considered an essential tool for self-discovery. These diaries were not meant for vanity or self-praise, but served as a clear, objective mirror of the student's inner life. Guided by great sages (such as Swami Sivananda), practitioners recorded their waking hours, active chanting counts, hours spent in silence (Mauna), and any distractions or mental obstacles faced during their sessions.
+                </p>
+                <p>
+                  Entering your daily practices into a diary fosters a healthy sense of personal accountability. Rather than relying on seasonal bursts of inspiration, a Sadhana Patra helps you build a steady, reliable rhythm. By keeping an objective look at your daily efforts, you can easily spot recurring patterns of mental restlessness (Rajas) or lethargy (Tamas) over time. This clear awareness makes it easier to adapt your environment, posture, and chanting times to cultivate stable focus.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-orange-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <Flame className="w-4 h-4" />
+                  2. Habit Psychology & Brain Neuroplasticity
+                </h3>
+                <p>
+                  From the perspective of modern behavioral sciences, maintaining a daily practice streak is a powerful way to reinforce positive lifestyle shifts. Neuroscientists have shown that the adult human brain maintains a beautiful capacity for adaptation, known as <strong>neuroplasticity</strong>. Under stressful daily workloads, our neural pathways default to automatic, reactive stress responses. By intentionally dedicating a specific slot of time each day to focused sound contemplation, you train new, calming pathways to form.
+                </p>
+                <p>
+                  Every time you complete a chanting session and update your log, you activate a natural habit loop composed of a cue, a routine, and a gentle reward. Seeing your personal streak grow acts as a visual milestone that keeps you encouraged. This positive reinforcement strengthens your resolve, helping your spiritual discipline transform from a conscious, effortful task into a natural, life-supporting habit that is seamlessly woven into the tapestry of your day.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-orange-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5 text-orange-404">
+                  <Clock className="w-4 h-4 text-orange-404" />
+                  3. The Physiological Impact of Rhythmic Focus
+                </h3>
+                <p>
+                  Consistently logging your meditation times also helps you monitor your physical well-being. Studies evaluating heart rate variability (HRV) and respiratory cycles show that regular, rhythmic chanting exercises support cardiovascular harmony. When you chant Sanskrit sounds with steady concern for proper breathing, you naturally practice slow-paced exhalation. This gentle practice helps balance blood pressure, improves oxygenation, and encourages deep, restorative rest.
+                </p>
+                <p>
+                  Tracking the duration of your sessions helps you build a gradual practice, starting with short 5-minute sessions and slowly expanding toward deeper, longer-duration contemplative states. This measured progress ensures you build sustainable cardiovascular and nervous stamina, preventing mental strain and making each step of your path stable, comfortable, and deeply rewarding.
+                </p>
+              </div>
+
+              <div className="bg-[#0e1424]/60 border border-white/5 rounded-2xl p-5 space-y-3 shadow-md">
+                <h3 className="text-xs font-black text-orange-400 uppercase tracking-wider border-b border-white/5 pb-1 flex items-center gap-1.5">
+                  <ShieldAlert className="w-4 h-4" />
+                  4. Frequently Asked Practice Tracker Questions
+                </h3>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: Is my personal practice data kept completely safe?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      Yes. Your chanting logs and counts are stored entirely inside your browser's local cache (LocalStorage). No personal data or statistics are ever sent to external cloud databases, protecting your privacy completely.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: What happens if I clear my browser's cache?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      Clearing your browser's local storage or cookies will remove your logged history. If you wish to save your history indefinitely, avoid deep cleanings of this specific tab's local files.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-white text-[10.5px]">Q: Is a daily streak broken if I miss a single session?</h4>
+                    <p className="text-[10px] text-slate-400">
+                      The tracking system evaluates consecutive calendar days. While missing a day resets your digital streak, remember that physical consistency and personal dedication always represent the true heart of your practice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="bg-[#0e1424]/40 border border-white/5 rounded-2xl p-5 space-y-2 text-justify">
+              <h3 className="font-extrabold text-[#fff] text-xs">Aesthetic Harmony in Practice Record keeping</h3>
+              <p>
+                Integrating your chanting sessions with a mindful practice diary transforms random meditative efforts into a cohesive, life-supporting lifestyle template. The tracker offers clear visual feedback on your progress, which naturally reinforces your dedication. By reflecting on your consistency, you can align your mental intention with ancient spiritual discipline. Balancing modern behavioral tracking with traditional Sanskrit science supports your mental resilience, deepens your focus, and brings lasting peace and clarity to your daily journey.
+              </p>
+            </div>
+
+          </section>
+
         </div>
       </div>
     </div>

@@ -327,6 +327,7 @@ export default function App() {
                   <VedicConcepts />
                 ) : activeTab === 'wisdom' ? (
                   <SpiritualKnowledgeHub 
+                    onNavigate={handleNavigate}
                     onSelectMantraForCounter={(mantraName, countValue) => {
                       setPreSelectedMantraName(mantraName);
                       setPreSelectedTarget(countValue);
