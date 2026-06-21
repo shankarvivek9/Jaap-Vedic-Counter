@@ -136,6 +136,7 @@ async function startServer() {
       }
 
       // Default SEO fields
+      let statusCode = 200;
       let seoTitle = 'Japa Sadhana - Modern Jaap Counter & Vedic Knowledge Platform';
       let seoDesc = 'Calm your mind, align your physiology, and track your daily Japa repetitions. Includes 50 authentic Sanskrit mantras, 30 blog articles, and sound synthesis.';
       let seoKeywords = 'Japa Sadhana, Jaap Counter, Gayatri Mantra, Shiva chanting, Vedic science, breathing helper, neuro-acoustics';
@@ -265,6 +266,7 @@ async function startServer() {
           `;
         } else {
           // Article slug mismatch, serve list instead of 404
+          statusCode = 404;
           seoTitle = 'Blog article not found - Japa Sadhana';
           preRenderText = `
             <h1>Theological Topic Not Found</h1>
@@ -347,6 +349,7 @@ async function startServer() {
             </div>
           `;
         } else {
+          statusCode = 404;
           seoTitle = 'Mantra not found - Japa Sadhana';
           preRenderText = `
             <h1>Sanskrit Mantra Not Found</h1>
@@ -453,6 +456,7 @@ async function startServer() {
           <p>Chanting mantras is a peaceful tool to quiet mental fluctuations (Chitta Vritti). This tool is built to assist focus and relaxation, and should be treated as a beautiful companion to health, not a magic cure. Use with common sense, respect, and continuous self-awareness.</p>
         `;
       } else {
+        statusCode = 404;
         seoTitle = 'Page Not Found - Japa Sadhana';
         preRenderText = `
           <h1>404: Sacred Path Not Found</h1>
@@ -492,7 +496,7 @@ async function startServer() {
 
       html = html.replace('<div id="root"></div>', crawledContentShell);
 
-      res.status(200).set({ 'Content-Type': 'text/html' }).send(html);
+      res.status(statusCode).set({ 'Content-Type': 'text/html' }).send(html);
     } catch (e: any) {
       if (vite) vite.handleStartError(e);
       res.status(500).send(e.stack || e.message || 'Internal Server Error');
