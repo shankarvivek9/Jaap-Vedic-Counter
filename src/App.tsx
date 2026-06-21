@@ -13,7 +13,7 @@ import HistoryDashboard from './components/HistoryDashboard';
 import SpiritualKnowledgeHub from './components/SpiritualKnowledgeHub';
 import HomepageWisdom from './components/HomepageWisdom';
 import { ChantingSession } from './types';
-import { AboutPage, ContactPage, PrivacyPolicyPage, TermsConditionsPage, DisclaimerPage } from './components/LegalContentPages';
+import { AboutPage, ContactPage, PrivacyPolicyPage, TermsConditionsPage, DisclaimerPage, FAQPage } from './components/LegalContentPages';
 
 // Curated list of inspirational spiritual verses for the ticker
 const DAILY_VERSES = [
@@ -286,6 +286,8 @@ export default function App() {
                   <AboutPage />
                 ) : pathname === '/contact' ? (
                   <ContactPage />
+                ) : pathname === '/faq' ? (
+                  <FAQPage />
                 ) : pathname === '/privacy-policy' ? (
                   <PrivacyPolicyPage />
                 ) : pathname === '/terms-and-conditions' ? (
@@ -412,6 +414,14 @@ export default function App() {
               className="hover:text-slate-200 cursor-pointer focus:outline-none"
             >
               Disclaimer
+            </a>
+            <span>•</span>
+            <a 
+              href="/faq"
+              onClick={(e) => { e.preventDefault(); handleNavigate('/faq'); }} 
+              className="hover:text-slate-200 cursor-pointer focus:outline-none text-orange-400 font-extrabold"
+            >
+              FAQ
             </a>
             <span>•</span>
             <a 

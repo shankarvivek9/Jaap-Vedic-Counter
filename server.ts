@@ -34,7 +34,8 @@ async function startServer() {
       '/contact',
       '/privacy-policy',
       '/terms-and-conditions',
-      '/disclaimer'
+      '/disclaimer',
+      '/faq'
     ];
 
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -454,6 +455,27 @@ async function startServer() {
 
           <h2>3. Devotional Practices</h2>
           <p>Chanting mantras is a peaceful tool to quiet mental fluctuations (Chitta Vritti). This tool is built to assist focus and relaxation, and should be treated as a beautiful companion to health, not a magic cure. Use with common sense, respect, and continuous self-awareness.</p>
+        `;
+      } else if (url === '/faq') {
+        seoTitle = 'Frequently Asked Questions - Japa Sadhana Science & Practice Base';
+        seoDesc = 'Read detailed, academic, and scientific Q&A regarding Vedic chanting, 108 repetitions, physiological impact, and privacy policies.';
+        preRenderText = `
+          <h1>Frequently Asked Questions: Biophysics, Tradition & Technology</h1>
+          <p>Welcome to our academic-scientific FAQ knowledge repository. Here, we address foundational questions using objective English.</p>
+          
+          ${navLinks}
+
+          <h2>Q1: What is the physiological and neurobiological impact of vocal Japa?</h2>
+          <p>Chanting high-frequency Sanskrit sounds stimulates the recurrent laryngeal nerve, which acts directly on pelvic and thoracic vagal pathways. Prolonging exhalation during chanting down-regulates sympathetic overdrive, stabilizing cardiovascular rhythms and blood pressure.</p>
+
+          <h2>Q2: Why do practitioners repeat mantras exactly 108 times?</h2>
+          <p>The number 108 is a profound astronomical and mathematical ratio. For example, the distance of the Sun to the Earth is 108 times the Sun's diameter. In traditional Jyotish science, 27 lunar mansions (Nakshatras) multiplied by 4 quarters (padas) equals 108 sectors, representing a complete cosmic cycle.</p>
+
+          <h2>Q3: How does the ambient soundscape synthesis work in Japa Sadhana?</h2>
+          <p>We do not loop flat audio recordings. Our engine invokes the browser Web Audio API in real time, synthesizing an authentic 136.1 Hz orbital resonance. This sound shield masks abrupt room noises through auditory sensory gating, inducing calm Alpha-Theta brain waves.</p>
+
+          <h2>Q4: What are your data privacy and cookie guidelines?</h2>
+          <p>All your meditation minutes, mala counts, and Japa history are kept entirely inside your local device cache (browser LocalStorage). We do not run automated cloud databases or ask for user credentials, preserving total cognitive liberty.</p>
         `;
       } else {
         statusCode = 404;

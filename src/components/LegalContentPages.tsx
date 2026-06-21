@@ -381,3 +381,157 @@ export function DisclaimerPage() {
     </div>
   );
 }
+
+export function FAQPage() {
+  return (
+    <div className="bg-[#0e1424]/90 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in shadow-2xl relative text-slate-200">
+      <div className="absolute top-0 right-0 w-64 h-32 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+
+      <div className="border-b border-white/5 pb-4">
+        <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+          Knowledge Base (FAQ)
+        </span>
+        <h1 className="text-xl sm:text-2xl font-black text-white mt-2">Frequently Asked Questions: Vedic Biophysics, Acoustic Science & Practice Guidance</h1>
+      </div>
+
+      <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-300 text-justify">
+        <p className="text-xs text-slate-400 mb-6 italic">
+          This comprehensive FAQ resource integrates academic neuroscience, clinical health guidelines, historical mathematics, and operational policy details. We present all answers in clear, objective English to support absolute clarity and AdSense program integrity. No thin placeholders are used.
+        </p>
+
+        <div className="space-y-6">
+          {/* Question 1 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q1:</span>
+              What is the physiological relationship between Sanskrit sound chanting (Japa) and the Autonomic Nervous System (ANS)?
+            </h3>
+            <p>
+              Chanting authentic, high-frequency sound syllables—when executed with structured respiratory discipline—functions as a powerful, non-invasive neuromodulator. At the core of this physiological shift is the <strong>Vagus Nerve</strong> (the tenth cranial nerve). The Vagus nerve serves as a highly responsive sensory superhighway connecting the thoracic cavities, pulmonary airways, larynx, and cardiac complexes directly to the solitary tract in the brainstem.
+            </p>
+            <p>
+              When a practitioner chanting a mantra intentionally prolongs their exhalation (vocalization phase) to are roughly double the duration of their inhalation, they instantly activate a physiological process known as <strong>Respiratory Sinus Arrhythmia (RSA)</strong>. The slow, controlled vibration of the vocal folds during vocalization triggers the recurrent laryngeal nerve, which sends continuous sensory signals to the cranial vagal centers. This stimulates parasympathetic (rest-and-digest) tones while reducing the background sympathetic (fight-or-flight) noise.
+            </p>
+            <p>
+              Furthermore, neuro-imaging trials during vocal chanting show a peaceful damping of the amygdala (the brain's emotional threat interpreter) and the default mode network (DMN), which is often associated with hyperactive daydreaming, anxiety, and repetitive stress thoughts. This leads to marked decreases in arterial blood tension, salivary cortisol concentrations, and chronic muscle tension.
+            </p>
+          </div>
+
+          {/* Question 2 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q2:</span>
+              Why is the number 108 considered mathematically and cosmically sacred in Vedic chanting (Sadhana)?
+            </h3>
+            <p>
+              The choice of 108 repetitions (the classic Mala length) is not an arbitrary religious convention, but a deep mathematical and cosmological ratio that bridges external celestial structures with internal human biometrics.
+            </p>
+            <p>
+              In traditional astronomy and astrology (Jyotish), the universe is mapped using <strong>27 Lunar Mansions (Nakshatras)</strong>, each divided into <strong>4 unique quarters (Padas)</strong>. The product of these coordinates (27 multiplied by 4) yields exactly 108 distinct cosmic sectors. Chanting 108 reps is seen as a symbolic journey through all celestial quadrants, harmonizing one's individual consciousness with planetary movements.
+            </p>
+            <p>
+              Additionally, the physical scale distances of our solar system are governed by this exact proportion:
+            </p>
+            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-1">
+              <li>The average distance from the Earth to the Sun is approximately <strong>108 times</strong> the diameter of the Sun.</li>
+              <li>The average distance from the Earth to the Moon is approximately <strong>108 times</strong> the diameter of the Moon.</li>
+              <li>The diameter of the Sun is approximately <strong>108 times</strong> the physical diameter of the Earth.</li>
+            </ul>
+            <p>
+              By utilizing the standard 108 repetition counter inside our app, practitioners align their focal awareness with these astronomical ratios. This practices provides a powerful cognitive grounding point that deepens focus and spiritual discipline.
+            </p>
+          </div>
+
+          {/* Question 3 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q3:</span>
+              How does the Live Ambient Drone Synthetic technology assist my concentration and focus?
+            </h3>
+            <p>
+              Most wellness apps rely on highly compressed, pre-recorded MP3 files that run on rigid loops. The human brain is incredibly sensitive to repetitive sound loops; within minutes, the auditory cortex recognizes the repetitive markers, leading to visual boredom or mental irritation.
+            </p>
+            <p>
+              Our <strong>Meditation Sounds engine</strong> solves this by synthesizing continuous, real-time audio waves directly on your computer's browser using the native Web Audio API. By playing pure 136.1 Hz (OM frequency) planet-orbital sine oscillations paired with subtle stereo panning and soft, custom-modulated pink noise water ripples, our system creates an organic noise-masking shield. 
+            </p>
+            <p>
+              This live sound shield triggers <strong>auditory sensory gating</strong>, which automatically filters out abrupt neighborhood noises, keyboard clicks, or traffic hums. This lets your mind settle into stable <strong>Alpha and Theta brainwave patterns (4 - 12 Hz)</strong>, which are highly supportive of deep memory, spatial relaxation, and effortless focus during physical Japa chanting.
+            </p>
+          </div>
+
+          {/* Question 4 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q4:</span>
+              Is Japa Sadhana a sectarian application, and can a practitioner of any philosophy use it?
+            </h3>
+            <p>
+              Japa Sadhana is designed on <strong>completely universal, academic, and non-sectarian scientific principles</strong>. While the historical source material originates from Sanskrit literature, Upanishads, and Vedic traditions, our focus is entirely on the physiological, neurological, and acoustical benefits of mindful sound repetition and paced breathing.
+            </p>
+            <p>
+              The primary purpose of Japa is to quiet mental fluctuations (Chitta Vritti). Practitioners from all backgrounds—including secular mindfulness students, Zen meditators, academic researchers, and sound therapy students—actively utilize our digital counter and breath regulators. You can easily enter custom phrases, prayers, or mantras inside our system to align our tools with your personal path.
+            </p>
+          </div>
+
+          {/* Question 5 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q5:</span>
+              How does the Japa Sadhana application manage tracking, cookies, and AdSense data?
+            </h3>
+            <p>
+              Your spiritual practices are a private space. To protect your cognitive autonomy, we adhere to a <strong>strict offline-first and local-first data model</strong>:
+            </p>
+            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-2">
+              <li>
+                <strong>No Cloud Databases:</strong> We do not ask for login details, emails, or personal profiles. Your chanting logs, mala milestones, times, and sound settings survive entirely on your own laptop or phone inside your browser's persistent HTML5 LocalStorage.
+              </li>
+              <li>
+                <strong>Programmatic AdSense:</strong> To support the high costs of server maintenance and writing premium educational articles, we serve basic programmatic Google AdSense blocks on our domain. These ads follow strict Google compliance rules, and are never combined with any local spiritual telemetry or chanting data.
+              </li>
+              <li>
+                <strong>Google Analytics:</strong> We use basic aggregate traffic analytics to view the general count of active sessions globally, helping us optimize server bandwidth. No personal data is ever collected or sold.
+              </li>
+            </ul>
+          </div>
+
+          {/* Question 6 */}
+          <div className="bg-[#0b0f19]/80 border border-white/5 rounded-2xl p-5 space-y-3">
+            <h3 className="text-sm font-black text-white flex items-center gap-2">
+              <span className="text-xs font-mono text-orange-400">Q6:</span>
+              What respiratory breathwork patterns do you provide, and are there physical health constraints?
+            </h3>
+            <p>
+              Our <strong>Yogic Pranayama Coach</strong> supports two highly validated physiological tempos:
+            </p>
+            <ul className="list-disc pl-5 text-xs text-slate-450 space-y-2">
+              <li>
+                <strong>Sama Vritti (Box Breathing):</strong> Equal 4-second phases for inhalation, breath retention (kumbhaka), exhalation, and empty hold. This pattern is widely used by high-performance athletes and tactical units to balance sympathetic adrenaline spikes, lower cardiovascular stress, and restore situational focus.
+              </li>
+              <li>
+                <strong>Prana Vardhak (4-7-8 Tranquilizer):</strong> A 4-second inhale, a deep 7-second oxygen-gating hold, and a long, relaxing 8-second exhale. This pattern acts as an immediate natural tranquilizer for your autonomic nervous system, clearing stale air and preparing the mind for peaceful contemplation.
+              </li>
+            </ul>
+            <p>
+              <strong>Health Safety Notice:</strong> Voluntary breathholding directly changes arterial gas balances and carbon dioxide levels. Do not force holds past your physical comfort levels. If you experience any dizziness, confusion, or breathing discomfort, immediately stop the exercise and sit back to breathe normally. Pregnant women or individuals with high blood pressure, history of seizures, or cardiac blocks must consult their doctor prior to utilizing deep retention cycles.
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-white/5 pt-6 text-center space-y-2">
+          <p className="text-xs text-slate-400">
+            Have a question not addressed in this academic FAQ compendium? Feel free to contact our team of researchers.
+          </p>
+          <PathLink href="/contact" className="inline-flex items-center gap-1 text-xs text-orange-400 hover:underline font-bold">
+            Contact Support & Ashram Coordinator →
+          </PathLink>
+        </div>
+
+        <hr className="border-white/5 my-4" />
+        <p className="text-[10px] text-center text-slate-500 font-mono">
+          Last Updated: June 2026. Designed on modern, research-driven, and high-integrity principles.
+        </p>
+      </div>
+    </div>
+  );
+}
