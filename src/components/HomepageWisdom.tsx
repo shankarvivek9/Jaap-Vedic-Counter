@@ -20,8 +20,11 @@ import {
   Anchor, 
   Award, 
   Hash, 
-  UserCheck 
+  UserCheck,
+  Search,
+  Filter
 } from 'lucide-react';
+import { ANCIENT_STORIES } from '../data/ancientStories';
 
 interface HomepageWisdomProps {
   onSelectMantra?: (mantraName: string, suggestedLimit: number) => void;
@@ -39,6 +42,22 @@ export default function HomepageWisdom({ onSelectMantra, onNavigateTab, children
   const toggleFaq = (index: number) => {
     setExpandedFaq(expandedFaq === index ? null : index);
   };
+
+  // State managers for the 50 Ancient Stories Compendium
+  const [compendiumSearch, setCompendiumSearch] = useState('');
+  const [compendiumCategory, setCompendiumCategory] = useState<'all' | 'focus' | 'devotion' | 'mindfulness' | 'wisdom' | 'breath'>('all');
+  const [expandedStoryId, setExpandedStoryId] = useState<string | null>(null);
+  const [storiesLimit, setStoriesLimit] = useState(6);
+
+  // Filter and paginate the 50 ancient stories
+  const filteredStories = ANCIENT_STORIES.filter(story => {
+    const matchesCategory = compendiumCategory === 'all' || story.category === compendiumCategory;
+    const searchString = `${story.title} ${story.character} ${story.lesson} ${story.content} ${story.source}`.toLowerCase();
+    const matchesSearch = searchString.includes(compendiumSearch.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const visibleStories = filteredStories.slice(0, storiesLimit);
 
   const stories = {
     valmiki: {
@@ -185,6 +204,183 @@ export default function HomepageWisdom({ onSelectMantra, onNavigateTab, children
             A regular chanting practice trains your attention and blocks out modern digital distractions. It builds strong habits, replaces daily worry with inner emotional balance, and resets your stress levels by slowing down your nervous system, leaving you refreshed, clear-headed, and deeply grounded.
           </p>
         </div>
+      </div>
+
+      {/* NEW: 50 ANCIENT STORIES COMPENDIUM SECTION */}
+      <div className="bg-[#0e1424]/90 border border-white/10 rounded-3xl p-6 sm:p-10 space-y-6 relative shadow-2xl" id="wisdom-50-stories">
+        <div className="absolute top-0 right-0 w-64 h-32 bg-orange-600/5 blur-3xl rounded-full pointer-events-none" />
+        
+        <div className="border-b border-white/5 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span className="text-[10px] font-mono font-bold tracking-wider text-orange-400 uppercase py-0.5 px-2 bg-orange-500/15 rounded-full border border-orange-500/25">
+              Interactive Library
+            </span>
+            <h2 className="text-xl sm:text-2xl font-black text-white mt-2">50 Ancient Stories of Focus & Mindful Sādhanā</h2>
+            <p className="text-xs text-slate-400 mt-1 max-w-2xl font-medium">
+              Explore 50 authentic miniature classical narratives detailing how great seekers, sages, deities, and kings cultivated absolute focus, controlled breath, and locked their resolve (Sankalpa).
+            </p>
+          </div>
+          <div className="text-xs text-slate-400 font-mono self-start md:self-end bg-orange-500/10 py-1.5 px-3 rounded-xl border border-orange-500/20 text-center shrink-0">
+            Showing <strong className="text-orange-400 font-bold">{filteredStories.length}</strong> of 50 Stories
+          </div>
+        </div>
+
+        {/* Search and Category Filter Toolbar */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-center" id="stories-toolbar">
+          {/* Search Box */}
+          <div className="relative lg:col-span-1">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+              <Search className="w-4 h-4 text-slate-400" />
+            </span>
+            <input
+              type="text"
+              value={compendiumSearch}
+              onChange={(e) => {
+                setCompendiumSearch(e.target.value);
+                setStoriesLimit(6); // reset pagination when searching
+              }}
+              placeholder="Search characters, sources, lessons..."
+              className="w-full pl-10 pr-4 py-2.5 bg-[#080d1a] border border-white/10 rounded-xl text-xs text-white placeholder-slate-500 font-medium focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/20 transition-all font-sans"
+              id="stories-search-input"
+            />
+            {compendiumSearch && (
+              <button
+                onClick={() => {
+                  setCompendiumSearch('');
+                  setStoriesLimit(6);
+                }}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded cursor-pointer"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="lg:col-span-3 flex flex-wrap gap-1.5 overflow-x-auto pb-1 font-sans">
+            {([
+              { key: 'all', label: 'All Categories' },
+              { key: 'focus', label: '🎯 Focus & Will' },
+              { key: 'mindfulness', label: '🧘 Mindfulness' },
+              { key: 'devotion', label: '💖 Devotion & Love' },
+              { key: 'wisdom', label: '📖 Vedic Wisdom' },
+              { key: 'breath', label: '💨 Breath & Prana' }
+            ] as const).map((cat) => (
+              <button
+                key={cat.key}
+                onClick={() => {
+                  setCompendiumCategory(cat.key);
+                  setStoriesLimit(6); // reset pagination on filter change
+                  setExpandedStoryId(null);
+                }}
+                className={`py-2 px-3.5 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 border ${
+                  compendiumCategory === cat.key
+                    ? 'bg-orange-600 border-orange-500 text-white shadow-lg shadow-orange-600/10'
+                    : 'bg-[#080d1a] hover:bg-white/5 border-white/10 text-slate-400 hover:text-white'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Stories Grid */}
+        {visibleStories.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="stories-grid-container">
+            {visibleStories.map((story) => {
+              const isExpanded = expandedStoryId === story.id;
+              const catLabel =
+                story.category === 'focus' ? 'Focus & Will' :
+                story.category === 'mindfulness' ? 'Mindfulness' :
+                story.category === 'devotion' ? 'Devotion & Love' :
+                story.category === 'wisdom' ? 'Vedic Wisdom' :
+                story.category === 'breath' ? 'Breath & Prana' : 'All';
+
+              return (
+                <div
+                  key={story.id}
+                  id={`story-card-${story.id}`}
+                  className={`bg-[#080d1a]/95 border transition-all duration-300 rounded-2xl flex flex-col justify-between overflow-hidden cursor-pointer ${
+                    isExpanded 
+                      ? 'border-orange-500/50 bg-[#0c1221] ring-1 ring-orange-500/10 md:col-span-2 lg:col-span-3 shadow-orange-500/5 shadow-2xl' 
+                      : 'border-white/5 hover:border-white/10 hover:bg-[#0c1221]/40'
+                  }`}
+                  onClick={() => {
+                    setExpandedStoryId(isExpanded ? null : story.id);
+                  }}
+                >
+                  <div className="p-5 sm:p-6 space-y-3 flex-grow">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[9px] font-mono tracking-wider font-bold text-orange-400 uppercase py-0.5 px-2 bg-orange-500/10 border border-orange-500/15 rounded-full">
+                        {catLabel}
+                      </span>
+                      <span className="text-[10px] font-mono text-slate-500">
+                        Source: {story.source}
+                      </span>
+                    </div>
+
+                    <div className="space-y-1">
+                      <h3 className="text-sm font-black text-white hover:text-orange-405 transition-colors flex items-center gap-1.5">
+                        <span className="text-orange-400 font-mono">✦</span>
+                        {story.title}
+                      </h3>
+                      <p className="text-[11px] text-slate-400 font-semibold font-mono">
+                        Key Character: <span className="text-slate-300 font-bold">{story.character}</span>
+                      </p>
+                    </div>
+
+                    <div className="bg-orange-500/5 border border-orange-500/10 rounded-xl p-3 text-[11px] leading-relaxed text-[#fda4af]/90 text-orange-200/90 italic font-medium my-1">
+                      <strong>Focus Lesson:</strong> {story.lesson}
+                    </div>
+
+                    {isExpanded ? (
+                      <div className="pt-2 text-xs sm:text-xs leading-relaxed text-slate-300 border-t border-white/5 mt-3 space-y-3 font-sans font-medium text-justify select-text" onClick={(e) => e.stopPropagation()}>
+                        <p className="whitespace-pre-wrap">{story.content}</p>
+                      </div>
+                    ) : (
+                      <p className="text-xs text-slate-400 leading-relaxed text-justify font-sans line-clamp-3 font-medium">
+                        {story.content}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="px-5 pb-5 pt-1 border-t border-transparent flex items-center justify-between text-[11px] font-black text-orange-400 shrink-0 font-sans">
+                    <span>{isExpanded ? 'Collapse Story ↑' : 'Read Full Story →'}</span>
+                    <span className="text-[10px] text-slate-500 font-mono">ID: {story.id}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="text-center py-12 bg-[#080d1a] border border-white/5 rounded-2xl space-y-3" id="stories-no-results font-sans">
+            <BookOpen className="w-10 h-10 text-slate-600 mx-auto" />
+            <p className="text-xs text-slate-400 font-semibold">No stories match your filter criteria or search query.</p>
+            <button
+              onClick={() => {
+                setCompendiumSearch('');
+                setCompendiumCategory('all');
+                setStoriesLimit(6);
+              }}
+              className="py-1.5 px-4 bg-orange-600/20 hover:bg-orange-600/30 text-orange-400 border border-orange-500/30 rounded-xl text-xs font-black cursor-pointer transition-all"
+            >
+              Reset Filters & Search
+            </button>
+          </div>
+        )}
+
+        {/* Load More Pagination Button */}
+        {filteredStories.length > storiesLimit && (
+          <div className="flex justify-center pt-2" id="stories-load-more-box font-sans">
+            <button
+              onClick={() => setStoriesLimit(prev => prev + 6)}
+              className="py-2.5 px-6 bg-white/5 border border-white/10 hover:bg-white/10 text-slate-200 hover:text-white rounded-xl text-xs font-black transition-all cursor-pointer shadow-lg inline-flex items-center gap-1.5"
+            >
+              Load More Ancient Stories ({filteredStories.length - storiesLimit} Remaining) ↓
+            </button>
+          </div>
+        )}
       </div>
 
       {/* 4. BEGINNER GUIDES SECTION (Practical tips) */}
