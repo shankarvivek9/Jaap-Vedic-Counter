@@ -207,9 +207,10 @@ export default function App() {
           return (
             <>
               <nav className="bg-white/5 backdrop-blur-xl border border-white/10 p-1.5 sm:p-2 rounded-2xl sm:rounded-3xl shadow-md flex flex-wrap gap-1 z-10 shrink-0">
-                <button
-                  onClick={() => handleNavigate('/')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+                <a
+                  href="/"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none ${
                     activeTab === 'jaap'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -218,11 +219,12 @@ export default function App() {
                 >
                   <Hash className="w-4 h-4 shrink-0" />
                   Jaap Counter
-                </button>
+                </a>
 
-                <button
-                  onClick={() => handleNavigate('/meditation')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+                <a
+                  href="/meditation"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/meditation'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none ${
                     activeTab === 'meditation'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -231,11 +233,12 @@ export default function App() {
                 >
                   <Wind className="w-4 h-4 shrink-0" />
                   Breathing Guide
-                </button>
+                </a>
 
-                <button
-                  onClick={() => handleNavigate('/sounds')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+                <a
+                  href="/sounds"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/sounds'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none ${
                     activeTab === 'sounds'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -244,11 +247,12 @@ export default function App() {
                 >
                   <Music className="w-4 h-4 shrink-0" />
                   Meditation Sounds
-                </button>
+                </a>
 
-                <button
-                  onClick={() => handleNavigate('/concepts')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+                <a
+                  href="/concepts"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/concepts'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none ${
                     activeTab === 'concepts'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -257,11 +261,12 @@ export default function App() {
                 >
                   <BookOpenCheck className="w-4 h-4 shrink-0" />
                   Vedic Concepts
-                </button>
+                </a>
 
-                <button
-                  onClick={() => handleNavigate('/blog')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer ${
+                <a
+                  href="/blog"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/blog'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none ${
                     activeTab === 'wisdom'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -270,11 +275,12 @@ export default function App() {
                 >
                   <BookOpen className="w-4 h-4 shrink-0" />
                   Wisdom Library
-                </button>
+                </a>
 
-                <button
-                  onClick={() => handleNavigate('/analytics')}
-                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer relative ${
+                <a
+                  href="/analytics"
+                  onClick={(e) => { e.preventDefault(); handleNavigate('/analytics'); }}
+                  className={`flex-1 min-w-[110px] py-3 px-4 rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 text-xs font-extrabold transition-all cursor-pointer text-decoration-none relative ${
                     activeTab === 'analytics'
                       ? 'bg-orange-600 text-white shadow-md shadow-orange-500/20 font-bold ring-1 ring-orange-400/30'
                       : 'text-slate-300 hover:bg-white/10 hover:text-white'
@@ -286,7 +292,7 @@ export default function App() {
                   {sessions.length > 0 && (
                     <span className="absolute top-1.5 right-2 w-2 h-2 rounded-full bg-orange-500 animate-ping" />
                   )}
-                </button>
+                </a>
               </nav>
 
               {/* Primary Screen Canvas Area */}
