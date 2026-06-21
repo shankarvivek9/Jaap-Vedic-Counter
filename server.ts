@@ -572,13 +572,12 @@ async function startServer() {
       // This is crucial: the crawler instantly reads the text list and links, while the React App 
       // hydrates over it cleanly when loaded!
       const crawledContentShell = `
-        <div id="root">
-          <div id="seo-crawlabale-static-container" style="background:#0b0f19; color:#f1f5f9; padding:20px; font-family:sans-serif; max-width:800px; margin:0 auto; display:block;">
-            ${preRenderText}
-            <p style="font-size:10px; color:#475569; margin-top:40px; text-align:center;">
-              Pre-rendered by Japa Sadhana SEO engine for search bots, AdSense compliance, and low-bandwidth web access.
-            </p>
-          </div>
+        <div id="root"></div>
+        <div id="seo-crawlabale-static-container" style="display: none !important;" aria-hidden="true">
+          ${preRenderText}
+          <p style="font-size:10px; color:#475569; margin-top:40px; text-align:center;">
+            Pre-rendered by Japa Sadhana SEO engine for search bots, AdSense compliance, and low-bandwidth web access.
+          </p>
         </div>
       `;
 

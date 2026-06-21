@@ -345,12 +345,13 @@ async function main() {
     html = html.replace('</head>', `${metaTags}\n</head>`);
 
     const crawledContentShell = `
-      <div id="root"><div id="seo-crawlabale-static-container" style="background:#0b0f19; color:#f1f5f9; padding:25px; font-family:sans-serif; max-width:800px; margin:0 auto; display:block; border-radius:16px; margin-top:20px;">
+      <div id="root"></div>
+      <div id="seo-crawlabale-static-container" style="display: none !important;" aria-hidden="true">
         ${preRenderText}
         <p style="font-size:10px; color:#475569; margin-top:40px; text-align:center; border-t: 1px dashed rgba(255,255,255,0.05); padding-top:20px;">
           Pre-rendered by Japa Sadhana SEO engine for search bots, AdSense compliance, and low-bandwidth web access.
         </p>
-      </div></div>
+      </div>
     `;
 
     html = html.replace('<div id="root"></div>', crawledContentShell);
